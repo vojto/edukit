@@ -1,0 +1,26 @@
+<h1 class="clearfix">
+	<div class="fl">
+		Pridať predmet
+	</div><!-- .fl -->
+	<div class="fr">
+		<%= link_to 'Späť', subjects_path, :class => "normal_size" %>
+	</div><!-- .fr -->
+	
+</h1>
+
+<div class="content">
+	<% form_for(@subject, :html => {:class => "normal"}) do |f| %>
+	  <%= f.error_messages %>
+
+	  <p>
+	    <%= f.label :title %><br />
+	    <%= f.text_field :title, :class => "text" %>
+	  </p>
+	  <p>
+	    <%= f.submit "Pridať" %>
+	  </p>
+	<% end %>
+
+	
+	
+</div><!-- .content -->

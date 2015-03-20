@@ -1,0 +1,61 @@
+8
+
+dir
+74
+file:///Users/vojto/Sites/_svn/projects/edukit/branches/1.0.1-bugfix/app/views
+file:///Users/vojto/Sites/_svn/projects
+
+
+
+2009-04-03T07:30:26.192716Z
+71
+vojto
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+10918c3d-1bdf-404c-876f-a823f85b1bd1
+
+layouts
+dir
+
+users
+dir
+
+subjects
+dir
+
+session
+dir
+
+main
+dir
+
+subject_lessons
+dir
+
+overview
+dir
+
+user_mailer
+dir
+
+notes
+dir
+
+exams
+dir
+
+homeworks
+dir
+

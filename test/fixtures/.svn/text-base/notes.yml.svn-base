@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  subject: matematika
+  description: Skolska
+  note: 1
+  weight: 1
+
+two:
+  subject: matematika
+  description: MyString
+  note: 1.5
+  weight: 0.75

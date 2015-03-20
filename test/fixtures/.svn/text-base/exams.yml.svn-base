@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  when: 2009-02-02
+  subject: matematika
+  notes: "nothing here ..."
+  length: 30
+  length_done: 0
+
+two:
+  when: 2009-02-03
+  subject: slovencina
+  notes: "nothing here ..."
+  length: 10
+  length_done: 10

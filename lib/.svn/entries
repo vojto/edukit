@@ -1,0 +1,55 @@
+8
+
+dir
+74
+file:///Users/vojto/Sites/_svn/projects/edukit/branches/1.0.1-bugfix/lib
+file:///Users/vojto/Sites/_svn/projects
+
+
+
+2009-04-02T17:02:01.467115Z
+63
+vojto
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+10918c3d-1bdf-404c-876f-a823f85b1bd1
+
+authenticated_test_helper.rb
+file
+
+
+
+
+2009-04-03T10:40:26.000000Z
+d0ca5663f200a5f7c1e5a8c9720f2a98
+2009-03-10T21:15:39.488772Z
+49
+vojto
+
+tasks
+dir
+
+authenticated_system.rb
+file
+
+
+
+
+2009-04-03T10:40:26.000000Z
+8f883528801fd90ae7b72a6c918ba5f2
+2009-03-10T21:15:39.488772Z
+49
+vojto
+

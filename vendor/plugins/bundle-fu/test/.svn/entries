@@ -1,0 +1,70 @@
+8
+
+dir
+74
+file:///Users/vojto/Sites/_svn/projects/edukit/branches/1.0.1-bugfix/vendor/plugins/bundle-fu/test
+file:///Users/vojto/Sites/_svn/projects
+
+
+
+2009-03-10T21:15:39.488772Z
+49
+vojto
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+10918c3d-1bdf-404c-876f-a823f85b1bd1
+
+test_helper.rb
+file
+
+
+
+
+2009-04-03T10:40:26.000000Z
+e07f742b84296a97e86f20e6d9d0901d
+2009-03-10T21:15:39.488772Z
+49
+vojto
+
+functional
+dir
+
+mock_view.rb
+file
+
+
+
+
+2009-04-03T10:40:26.000000Z
+c2ea7c4cb136984f654a21ad9ab1aadb
+2009-03-10T21:15:39.488772Z
+49
+vojto
+
+fixtures
+dir
+
+run_all.rb
+file
+
+
+
+
+2009-04-03T10:40:26.000000Z
+551216369e2efd8c0ba0262cd54e1f08
+2009-03-10T21:15:39.488772Z
+49
+vojto
+

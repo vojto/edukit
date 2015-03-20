@@ -1,0 +1,20 @@
+<h1>Editing subject_lesson</h1>
+
+<% form_for(@subject_lesson) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :day %><br />
+    <%= f.text_field :day %>
+  </p>
+  <p>
+    <%= f.label :lesson %><br />
+    <%= f.text_field :lesson %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @subject_lesson %> |
+<%= link_to 'Back', subject_lessons_path %>

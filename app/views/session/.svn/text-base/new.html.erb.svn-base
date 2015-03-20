@@ -1,0 +1,3 @@
+<h1>Prihlásenie</h1>
+
+<%= render :partial => 'login' %>

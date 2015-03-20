@@ -1,0 +1,100 @@
+<div id="login_box" class="hidden">
+	<%= render :partial => "session/login" %>
+</div><!-- #login_box -->
+
+<div id="registration_box" class="hidden">
+	<%= render :partial => "users/registration" %>
+</div><!-- #registration_box -->
+
+<div class="content clearfix">
+
+	<div class="fl" id="primary">
+		<div class="box">
+			<h1>Potrebuješ organizovať</h1>
+			<p>
+				Predstav si bežnú situáciu. Prídeš domov a zisťuješ, že sa treba niečo učiť. Lúštiš predmety a rozmýšľaš, z čoho sa koľko treba učiť, z čoho je písomka a aké domáce úlohy si si mal pripraviť.
+			</p>
+			<p>
+				No nakoniec aj tak prídeš do školy a zistíš, že si na polovicu veci zabudol a druhú polovicu si odflákol, lebo si to nestihal. Znie to ako prehnaná situácia, ale uznaj, že zlá organizácia a neporiadok je väčšinou dôvodom neúspechov.
+			</p>
+		</div><!-- .box -->
+		
+		<div class="box">
+			<h1>Čo robí Edukit</h1>
+			<p>
+				Edukit je zázračný nástroj, do ktorého vložiš informácie o svojom štúdiu a o zvyšok sa postará. Edukit zvláda mnoho vecí, napríklad:
+			</p>
+			<ul class="feature_list">
+				<li>Každý deň ti povie, čo sa ti treba učiť.
+					<small>
+						Iba si nastavíš rozvrh, povieš si koľko sa ti treba učiť na jednotlivé predmety a Edukit sa postará o zvyšok. Na hlavnej stránke, Nástenke, uvidíš jasný prehľad, čo ťa dnes čaká.
+					</small>
+				</li>
+				
+				<li>Zobrazí ti zajtrajšie písomky a domáce úlohy.
+					<small>
+						V sekciách domáce úlohy a písomky si ich jednoducho pridáš a Edukit ti ich včas zobrazí na hlavnej stránke. Čas učenia pripočíta k tomu bežnému, takže budeš mať skvelý prehľad.
+					</small>
+				</li>
+				
+				<li>Spravuje tvoje známky, aby si vedel, kde treba zabrať.
+					<small>
+						Známky si môžeš veľmi rýchlo pridať, a okamžite uvidíš, ako sú na tom tvoje priemery. Svoj prospech uvidíš aj na hlavnej stránke, takže budeš vedieť, ktoré predmety sú dôležitejšie.
+					</small>
+				</li>
+				
+			</ul>
+			<p>
+				To všetko je jednoduché a netreba sa nič učiť. Edukit dokáže používať desaťročný žiak aj osemnásťročná maturantka.
+			</p>
+		</div><!-- .box -->
+		
+	</div><!-- .fl -->
+	
+	<div class="fr" id="secondary">
+		<div class="box">
+			<h2>Webhosting</h2>
+			<p>
+				Edukit je náročná aplikácia, no beží veľmi hladko, vďaka firme <a href="http://websupport.sk">WebSupport</a>.
+			</p>
+			<p>
+				<a href="http://websupport.sk"><img src="/images/websupport.png" class="nice" alt="WebSupport" /></a>
+			</p>
+		</div><!-- .box -->
+		<div class="box">
+			<h2>O projekte</h2>
+			<p>
+				Snahou tohto projektu je priniesť bežným študentom kúsok zo sveta manažérov a podnikateľov, ktorí musia mať svoje povinnosti dokonale zorganizované.
+			</p>
+			<p>
+				Je určený pre každého študenta: každý ho dokáže používať a je úplne zadarmo.
+			</p>
+			<p>
+				Mimochodom, Edukit bol ocenený v súťaži Junior Internet.
+			</p>
+			<p>
+				<a href="http://www.juniorinternet.sk"><img src="/images/junior_internet.png" alt="Junior Internet" class="nice" /></a>
+			</p>
+			<br />
+			<h2>Trošku o technickom spracovaní</h2>
+			<p>
+				Edukit nie je stránka. Je to veľmi interaktívna aplikácia, ktorej používanie je úplne jednoduché a veľmi rýchle. 
+			</p>
+			<p>
+				Technické informácie sú nudné, ale predsa: Edukit je poháňaný webovým frameworkom <a href="http://rubyonrails.org">Ruby on Rails</a>. 
+			</p>
+			<p>
+				To prináša najmenej tisíc výhod. Vďaka jazyku Ruby sa vývoj podobá viac na písanie poézie, a hotová aplikácia na umelecké dielo. Rails má výbornú ORM vrstvu - Active Record. Jeho routovací systém je založený na architektúre REST, ktorú Edukit plne využíva, teda poskytuje API na všetky operácie s dátami.
+			</p>
+			<p>
+				Každý riadok kódu je overený testom, spolu máme stovky testov. Takže pri pridávaní funkcionality naisto vieme, že sme nič nepokazili. Testovanie je mimochodom ďalšia činnosť, ktorú Rails veľmi uľahčuje.
+			</p>
+			<p>
+				Čo sa týka spomínanej interaktivity, JavaScriptové vylepšenia sú poháňané knižnicou <a href="http://jquery.com">jQuery</a>. Vďaka REST architektúre, ktorá zjednodušuje používanie rôznych formátov celá aplikácia funguje dokonale aj s vypnutým JavaScriptom. (No samozrejme pomalšie.)
+			</p>
+		</div><!-- .box -->
+	</div><!-- .fr -->
+	
+	
+	
+</div><!-- .content -->

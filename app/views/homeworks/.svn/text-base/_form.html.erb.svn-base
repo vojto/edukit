@@ -1,0 +1,16 @@
+<% form_for(@homework, :builder => LabeledFormBuilder, :html => {:class => "normal"}) do |f| %>
+		<div class="clearfix">
+			<div class="fl">
+				<%= f.text_field :when, :class => 'date' %>
+				<%= f.collection_select :subject_id, current_user.subjects, :id, :title %>
+				<%= f.text_field :length, :label => "Dĺžka učenia (v minútach)" %>
+				<%= hidden_field_tag :redirect, params[:redirect] %>	
+			</div><!-- .fl -->
+
+			<div class="fl ml10">
+				<%= f.text_area :notes, :class => "small" %>
+			</div><!-- .fr -->
+		</div><!-- .clearfix -->
+		
+		<%= f.submit "Uložiť" %>
+<% end %>

@@ -1,0 +1,26 @@
+<div class="content">
+	
+	<% form_for :session, :url => session_path, :builder => LabeledFormBuilder, :html => {:class => "normal"} do |f| -%>
+	<h3>Prihlás sa. Máš konto?</h3>
+	<%= f.text_field :login %>
+
+	<%= f.password_field :password %>
+
+	<%= f.check_box :remember_me, :label => "Zapamätať si prihlásenie" %>
+
+	<%= f.submit 'Prihlásiť sa' %>
+	<% end -%>
+	
+	<% form_tag({:controller => "session", :action => "openid_login"}, :class => "normal last") do -%>
+	<h3>Máš OpenID? Prihlás sa s ním!</h3>
+	<p><label for="openid_url">Tvoja adresa pre OpenID</label><br/>
+	<%= text_field_tag 'openid_url', nil, :class => "text wide" %></p>
+
+	<p><%= submit_tag 'Prihlásiť sa s OpenID' %></p>
+	<% end -%>
+
+</div><!-- .content -->
+
+<div class="submit">
+	Nemáš konto? <a href="<%= url_for new_user_path %>" class="bound_registration">Vytvor si ho zadarmo!</a>
+</div><!-- .foot -->

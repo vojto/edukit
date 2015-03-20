@@ -1,0 +1,14 @@
+<li class="clearfix day_<%= homework.when.to_s %><%= " done" if homework.done? %>" id="homework_<%= homework.id %>">
+	<div class="subject fl <%= homework.subject.color %>">
+		<%= homework.subject.abbr %>
+	</div><!-- .subject -->
+	<div class="length fl"><%= homework.length %>m</div>
+	<div class="notes fl">
+		<%= homework.notes %>
+	</div><!-- .notes -->
+
+	<div class="status fr">
+		<%= link_to "Hotovo?", status_homework_path(homework, :status => "done"), :class => "ajaxified done" %>
+		<%= link_to "Vrátiť", status_homework_path(homework, :status => "not"), :class => "ajaxified revert" %>
+	</div><!-- .status -->
+</li>

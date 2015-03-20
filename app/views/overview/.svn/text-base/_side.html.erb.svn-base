@@ -1,0 +1,6 @@
+<% content_for :secondary do %>
+<h3>Nástenka</h3>
+<p>Nástenka je prvá vec, ktorú budeš pozerať každý deň. Dá ti <em>jasný prehľad</em> tvojich <em>povinností</em>, ktoré ťa čakajú.</p>
+<p>Hore vidíš všetky predmety, ktoré máš zajtra. Pri každom predmete je <em>čas učenia</em>. To je súčet <em>bežného učenia</em> na hodinu (to si nastavíš v predmetoch) a všetkých <em>písomiek</em> a <em>domácich úloh</em>.</p>
+<p>Ak máš pocit, že si pripravený na hodinu, iba <em>klikni na hotovo</em>. Predmet sa označí ako naučený, a ak k nemu nemáš žiadne ďalšie písomky alebo domáce úlohy, tak zošedne.</p>
+<% end %>

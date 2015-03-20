@@ -1,0 +1,6 @@
+<% if @exam.done? %>
+$("#exam_<%= @exam.id %>").addClass("done");
+<% else %>
+$("#exam_<%= @exam.id %>").removeClass("done");
+<% end %>
+<%= render :partial => "overview/update_subjects" %>

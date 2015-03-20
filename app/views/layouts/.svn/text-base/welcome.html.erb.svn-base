@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <meta name="keywords" content="skola, skoly, škola, stredna skola, zakladna skola, ucenie, učenie, vzdelávanie, pomôcka, nástroj, aplikácia, ajax, web2.0, deti, zoznam" />
+  <meta name="description" content="Edukit je nástroj, ktorý pomáha študentom organizovať svoje povinnosti. Vytvoríš si rozvrh hodín, pridáš domáce úlohy a písomky, a získaš každodenný prehľad povinností." />
+  <meta name="author" content="Vojto Riník" />
+  <meta name="robots" content="index, follow" />
+  <title>Edukit: Študuj efektívne.</title>
+	<%= stylesheet_link_tag 'scaffold', 'schoolr', 'schoolr/welcome' %>
+	<%= javascript_include_tag 'jquery-1.3.1.min.js', 'modalbox', 'welcome' %>
+	<%= javascript_include_tag "application.js", "welcome.messages.js" %>
+  	<!--[if IE]>
+	<%= stylesheet_link_tag '_ie.css' -%>
+	<![endif]-->
+</head>
+<body>
+
+<div id="container">
+	<div id="header">
+		<h1>Edukit: Tvoj pomocník pri štúdiu!</h1>
+		<span id="user_nav">
+			<a class="tryout modalbox" href="<%= url_for new_user_url %>"><span>Zaregistrovať sa</span></a>
+		</span>
+	</div><!-- #header -->
+	<div id="banner">
+		<div id="top_links">
+			<a href="<%= url_for new_session_path %>" class="bound_login">Prihlásiť sa</a> | 
+			<a href="http://blog.edukit.sk">Blog</a> <span class="new">Novinka</span>
+		</div><!-- #top_links -->
+		<div id="messages">
+			<div class="message pngfix" id="message_1">
+				<h2>Podrobný prehľad. Každý deň.</h2>
+				<p>Každý deň uvidíš podrobný prehľad povinnosti a udalostí v najbližšej dobe.
+				Odteraz nemusíš nosiť všetko v hlave alebo v nepraktických zápisnikoch. Edukit sa o to postará za teba.</p>
+			</div><!-- .message -->
+			
+			<div class="message pngfix" id="message_2">
+				<h2>Domáce úlohy a písomky</h2>
+				<p>Edukit ti pomôže zapamätať si dátumy písomiek a domácich úloh. Povieš si, koľko sa ti treba učiť a Edukit ti to včas pripomenie a pridá do denného programu. </p>
+			</div><!-- .message -->
+			
+			<div class="message pngfix" id="message_3">
+				<h2>Známky</h2>
+				<p>Odteraz budeš mať dokonalý prehľad o svojich známkach. Edukit bude dávať na prvé miesto tie predmety, z ktorých máš horšie známky a pomôže ti úspešne prejsť štúdiom.</p>
+			</div><!-- .message -->
+		</div><!-- #messages -->
+		<div id="message_zones">
+			<div class="message_zone" id="message_zone_1"></div>
+			<div class="message_zone" id="message_zone_2"></div>
+			<div class="message_zone" id="message_zone_3"></div>
+		</div><!-- #message_zones -->
+	</div><!-- #banner -->
+	<div id="tryout" class="clearfix">
+		<a class="fl tryout_large modalbox" href="<%= url_for new_user_url %>"><span>Vyskúšaj si Edukit!</span></a>
+		<span class="fl tryout_text">Edukit je úplne zadarmo a registrácia trvá zopár sekúnd! (Alebo môžeš použiť OpenID)</span>
+	</div><!-- #tryout -->
+	<div id="content" class="clearfix">
+		<%= yield %>
+	</div><!-- #content -->
+</div><!-- #container -->
+<%= render :partial => 'layouts/google_analytics' %>
+</body>
+</html>

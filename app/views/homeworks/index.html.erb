@@ -1,0 +1,21 @@
+<h1 class="clearfix">
+	<div class="fl">
+		Domáce úlohy
+	</div><!-- .fl -->
+	<div class="fr">
+		<%= link_to 'Pridať domácu úlohu', new_homework_path, :class => "normal_size ajaxified" %>
+	</div><!-- .fr -->
+</h1>
+
+<div class="content">
+	
+	<%= render :partial => "homeworks", :object => @days %>
+	
+</div><!-- .content -->
+
+<% content_for :secondary do %>
+<h3>Domáce úlohy</h3>
+<p>
+	Veľmi jednoduchý prehľad domácich úloh. Ak dostaneš v škole domácu úlohu, ktorú bežne nemáš, tak si ju pridaj sem. Zobrazí sa ti na nástenke deň pred dátumom odovzdania.
+</p>
+<% end %>

@@ -1,0 +1,2 @@
+<%= render :partial => "update_subjects" %>
+$("li#subject_<%= @subject.id %>").removeClass("done");

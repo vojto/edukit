@@ -1,0 +1,12 @@
+$("#homework_<%= @homework.id %>").slideUp(function(){
+	$(this).remove();
+	if($("li.day_<%= @homework.when.to_s %>").length == 0)
+	{
+		$("h4.day_<%= @homework.when.to_s %>").animate({opacity:0}, function(){
+			$(this).slideUp(function(){
+				$("h4.day_<%= @homework.when.to_s %>").remove();
+				$("ul.day_<%= @homework.when.to_s %>").remove();
+			});
+		});
+	}
+});

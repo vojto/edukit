@@ -1,0 +1,13 @@
+<% @days.each do |day, homeworks| %>
+
+	<div class="clearfix">
+		<h4 class="task_list day_<%= day.to_s %>">
+			<%= nice_date day %>
+		</h4>	
+	</div><!-- .clearfix -->
+
+	<ul class="task_list day_<%= day.to_s %>">
+		<%= render :partial => 'homework', :collection => homeworks %>
+	</ul>
+
+<% end %>

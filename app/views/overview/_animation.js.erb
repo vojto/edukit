@@ -1,0 +1,25 @@
+var bar = $("#subject_<%= @subject.id %>");
+$("h2.finished").show();
+
+bar.animate({opacity: 0}, function(){bar.slideUp(function(){
+	$("ul.dashboard.finished").append(bar);
+	bar.addClass("done");
+	bar.slideDown().animate({opacity: 1});
+	
+	ct = $("ul.dashboard.unfinished li").size();
+	if(ct==0) $("h2.unfinished").fadeOut();
+})});
+
+/*****/
+
+var bar = $("#subject_<%= @subject.id %>");
+$("h2.unfinished").show();
+
+bar.animate({opacity: 0}, function(){bar.slideUp(function(){
+	$("ul.dashboard.unfinished").append(bar);
+	bar.removeClass("done");
+	bar.slideDown().animate({opacity: 1});
+	
+	ct = $("ul.dashboard.finished li").size();
+	if(ct==0) $("h2.finished").fadeOut();
+})})

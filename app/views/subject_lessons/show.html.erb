@@ -1,0 +1,13 @@
+<p>
+  <b>Day:</b>
+  <%=h @subject_lesson.day %>
+</p>
+
+<p>
+  <b>Lesson:</b>
+  <%=h @subject_lesson.lesson %>
+</p>
+
+
+<%= link_to 'Edit', edit_subject_lesson_path(@subject_lesson) %> |
+<%= link_to 'Back', subject_lessons_path %>

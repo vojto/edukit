@@ -1,0 +1,2531 @@
+# Logfile created on Thu Sep 17 15:27:36 +0200 2009  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `exams` [0m
+
+
+Processing ExamsController#create (for 0.0.0.0 at 2009-09-17 15:49:34) [POST]
+  Parameters: {"exam"=>{"when"=>"5.8.2009"}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mExam Create (0.2ms)[0m   [0;1mINSERT INTO `exams` (`notes`, `length_done`, `length`, `subject_id`, `when`) VALUES(NULL, 0, NULL, NULL, '2009-08-05')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/exams
+Completed in 7ms (DB: 125) | 302 Found [http://test.host/exams?exam%5Bwhen%5D=5.8.2009]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `exams` [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `exams` [0m
+  [4;35;1mSubject Load (0.1ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 619423396) [0m
+
+
+Processing ExamsController#create (for 0.0.0.0 at 2009-09-17 15:49:34) [POST]
+  Parameters: {"exam"=>{"subject_id"=>619423396, "when"=>"4.7.2009"}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mExam Create (0.3ms)[0m   [0;1mINSERT INTO `exams` (`notes`, `length_done`, `length`, `subject_id`, `when`) VALUES(NULL, 0, NULL, 619423396, '2009-07-04')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Rendering exams/create
+  [4;36;1mSubject Load (0.2ms)[0m   [0;1mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 619423396) [0m
+Rendered exams/_exam (3.3ms)
+Completed in 9ms (View: 6, DB: 3) | 200 OK [http://test.host/exams?exam%5Bsubject_id%5D=619423396&exam%5Bwhen%5D=4.7.2009]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `exams` [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `exams` [0m
+  [4;36;1mExam Load (0.1ms)[0m   [0;1mSELECT * FROM `exams` WHERE (`exams`.`id` = 953125641) [0m
+
+
+Processing ExamsController#destroy (for 0.0.0.0 at 2009-09-17 15:49:34) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;36;1mExam Load (0.5ms)[0m   [0;1mSELECT * FROM `exams` WHERE (`exams`.`id` = 953125641) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mExam Destroy (0.3ms)[0m   [0;1mDELETE FROM `exams` WHERE `id` = 953125641[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/exams
+Completed in 3ms (DB: 2) | 302 Found [http://test.host/exams/953125641/destroy]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `exams` [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;36;1mExam Load (0.1ms)[0m   [0;1mSELECT * FROM `exams` WHERE (`exams`.`id` = 953125641) [0m
+
+
+Processing ExamsController#edit (for 0.0.0.0 at 2009-09-17 15:49:34) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;36;1mExam Load (0.1ms)[0m   [0;1mSELECT * FROM `exams` WHERE (`exams`.`id` = 953125641) [0m
+Rendering template within layouts/main
+Rendering exams/edit
+  [4;35;1mSubject Load (0.3ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.user_id = 745185059) [0m
+Rendered exams/_form (25.1ms)
+Rendered layouts/_google_analytics (0.4ms)
+Completed in 33ms (View: 31, DB: 1) | 200 OK [http://test.host/exams/953125641/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+
+
+Processing ExamsController#index (for 0.0.0.0 at 2009-09-17 15:49:34) [GET]
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;36;1mExam Load (0.4ms)[0m   [0;1mSELECT `exams`.* FROM `exams` INNER JOIN `subjects` ON `subjects`.id = `exams`.subject_id WHERE (subjects.user_id = 745185059 and exams.when >= '2009-09-17') [0m
+Rendering template within layouts/main
+Rendering exams/index
+Rendered exams/_exams (0.5ms)
+Rendered layouts/_google_analytics (0.1ms)
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/exams]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+
+
+Processing ExamsController#new (for 0.0.0.0 at 2009-09-17 15:49:34) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering exams/new
+  [4;35;1mSubject Load (0.2ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.user_id = 745185059) [0m
+Rendered exams/_form (1.8ms)
+Rendered layouts/_google_analytics (0.0ms)
+Completed in 4ms (View: 4, DB: 1) | 200 OK [http://test.host/exams/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+
+
+Processing ExamsController#create (for 0.0.0.0 at 2009-09-17 15:49:34) [POST]
+  Parameters: {"exam"=>{}}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering template within layouts/main
+Rendering exams/new
+  [4;36;1mSubject Load (0.2ms)[0m   [0;1mSELECT * FROM `subjects` WHERE (`subjects`.user_id = 745185059) [0m
+Rendered exams/_form (1.8ms)
+Rendered layouts/_google_analytics (0.0ms)
+Completed in 5ms (View: 3, DB: 1) | 200 OK [http://test.host/exams?]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mExam Load (0.2ms)[0m   [0mSELECT * FROM `exams` WHERE (`exams`.`id` = 953125641) [0m
+
+
+Processing ExamsController#index (for 0.0.0.0 at 2009-09-17 15:49:34) [GET]
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/exams]
+
+
+Processing ExamsController#new (for 0.0.0.0 at 2009-09-17 15:49:34) [GET]
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/exams]
+
+
+Processing ExamsController#create (for 0.0.0.0 at 2009-09-17 15:49:34) [POST]
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/exams]
+
+
+Processing ExamsController#show (for 0.0.0.0 at 2009-09-17 15:49:34) [GET]
+  Parameters: {"id"=>"953125641"}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/exams]
+
+
+Processing ExamsController#edit (for 0.0.0.0 at 2009-09-17 15:49:34) [GET]
+  Parameters: {"id"=>"953125641"}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/exams]
+
+
+Processing ExamsController#update (for 0.0.0.0 at 2009-09-17 15:49:34) [PUT]
+  Parameters: {"id"=>"953125641"}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/exams]
+
+
+Processing ExamsController#destroy (for 0.0.0.0 at 2009-09-17 15:49:34) [DELETE]
+  Parameters: {"id"=>"953125641"}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/exams]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mExam Load (0.1ms)[0m   [0mSELECT * FROM `exams` WHERE (`exams`.`id` = 953125641) [0m
+
+
+Processing ExamsController#status (for 0.0.0.0 at 2009-09-17 15:49:34) [GET]
+  Parameters: {"status"=>"not", "id"=>"953125641"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;35;1mSubjectLesson Load (0.3ms)[0m   [0mSELECT `subject_lessons`.* FROM `subject_lessons` INNER JOIN `subjects` ON `subjects`.id = `subject_lessons`.subject_id WHERE (day = 5 AND subjects.user_id=745185059) GROUP BY subject_id[0m
+  [4;36;1mExam Load (0.2ms)[0m   [0;1mSELECT * FROM `exams` WHERE (`exams`.`id` = '953125641') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Rendering exams/status
+Rendered overview/_update_subjects (0.7ms)
+Completed in 4ms (View: 1, DB: 1) | 200 OK [http://test.host/exams/953125641/status?status=not]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;36;1mExam Load (0.2ms)[0m   [0;1mSELECT * FROM `exams` WHERE (`exams`.`id` = 953125641) [0m
+
+
+Processing ExamsController#status (for 0.0.0.0 at 2009-09-17 15:49:34) [GET]
+  Parameters: {"status"=>"done", "id"=>"953125641"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;36;1mSubjectLesson Load (0.2ms)[0m   [0;1mSELECT `subject_lessons`.* FROM `subject_lessons` INNER JOIN `subjects` ON `subjects`.id = `subject_lessons`.subject_id WHERE (day = 5 AND subjects.user_id=745185059) GROUP BY subject_id[0m
+  [4;35;1mExam Load (0.1ms)[0m   [0mSELECT * FROM `exams` WHERE (`exams`.`id` = '953125641') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mExam Update (0.2ms)[0m   [0mUPDATE `exams` SET `length_done` = 30 WHERE `id` = 953125641[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Rendering exams/status
+Rendered overview/_update_subjects (0.0ms)
+Completed in 3ms (View: 0, DB: 1) | 200 OK [http://test.host/exams/953125641/status?status=done]
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+
+
+Processing ExamsController#new (for 0.0.0.0 at 2009-09-17 15:49:34) [GET]
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+Rendering exams/new
+  [4;35;1mSubject Load (0.2ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.user_id = 745185059) [0m
+Rendered exams/_form (1.8ms)
+Completed in 3ms (View: 2, DB: 1) | 200 OK [http://test.host/exams/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mExam Load (0.1ms)[0m   [0mSELECT * FROM `exams` WHERE (`exams`.`id` = 953125641) [0m
+
+
+Processing ExamsController#show (for 0.0.0.0 at 2009-09-17 15:49:34) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;35;1mExam Load (0.1ms)[0m   [0mSELECT * FROM `exams` WHERE (`exams`.`id` = 953125641) [0m
+Rendering template within layouts/main
+Rendering exams/show
+Rendered layouts/_google_analytics (0.0ms)
+Completed in 3ms (View: 2, DB: 1) | 200 OK [http://test.host/exams/953125641]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mExam Load (0.1ms)[0m   [0mSELECT * FROM `exams` WHERE (`exams`.`id` = 953125641) [0m
+
+
+Processing ExamsController#update (for 0.0.0.0 at 2009-09-17 15:49:34) [PUT]
+  Parameters: {"exam"=>{}, "id"=>"953125641"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;35;1mExam Load (0.1ms)[0m   [0mSELECT * FROM `exams` WHERE (`exams`.`id` = 953125641) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/exams
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/exams/953125641?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `homeworks` [0m
+
+
+Processing HomeworksController#create (for 0.0.0.0 at 2009-09-17 15:49:34) [POST]
+  Parameters: {"homework"=>{"when"=>"5.8.2009"}}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mHomework Create (0.1ms)[0m   [0;1mINSERT INTO `homeworks` (`notes`, `length_done`, `length`, `subject_id`, `when`) VALUES(NULL, 0, NULL, NULL, '2009-08-05')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/homeworks
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/homeworks?homework%5Bwhen%5D=5.8.2009]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `homeworks` [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `homeworks` [0m
+  [4;35;1mSubject Load (0.2ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 619423396) [0m
+
+
+Processing HomeworksController#create (for 0.0.0.0 at 2009-09-17 15:49:34) [POST]
+  Parameters: {"homework"=>{"subject_id"=>619423396, "when"=>"4.7.2009"}}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mHomework Create (0.1ms)[0m   [0;1mINSERT INTO `homeworks` (`notes`, `length_done`, `length`, `subject_id`, `when`) VALUES(NULL, 0, NULL, 619423396, '2009-07-04')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Rendering homeworks/create
+  [4;36;1mSubject Load (0.1ms)[0m   [0;1mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 619423396) [0m
+Rendered homeworks/_homework (2.4ms)
+Completed in 6ms (View: 4, DB: 2) | 200 OK [http://test.host/homeworks?homework%5Bsubject_id%5D=619423396&homework%5Bwhen%5D=4.7.2009]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `homeworks` [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `homeworks` [0m
+  [4;36;1mHomework Load (0.2ms)[0m   [0;1mSELECT * FROM `homeworks` WHERE (`homeworks`.`id` = 953125641) [0m
+
+
+Processing HomeworksController#destroy (for 0.0.0.0 at 2009-09-17 15:49:34) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;36;1mHomework Load (0.1ms)[0m   [0;1mSELECT * FROM `homeworks` WHERE (`homeworks`.`id` = 953125641) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mHomework Destroy (0.1ms)[0m   [0;1mDELETE FROM `homeworks` WHERE `id` = 953125641[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/homeworks
+Completed in 2ms (DB: 2) | 302 Found [http://test.host/homeworks/953125641/destroy]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `homeworks` [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;36;1mHomework Load (0.1ms)[0m   [0;1mSELECT * FROM `homeworks` WHERE (`homeworks`.`id` = 953125641) [0m
+
+
+Processing HomeworksController#edit (for 0.0.0.0 at 2009-09-17 15:49:34) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;36;1mHomework Load (0.1ms)[0m   [0;1mSELECT * FROM `homeworks` WHERE (`homeworks`.`id` = 953125641) [0m
+Rendering template within layouts/main
+Rendering homeworks/edit
+  [4;35;1mSubject Load (0.3ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.user_id = 745185059) [0m
+Rendered homeworks/_form (3.3ms)
+Rendered layouts/_google_analytics (0.0ms)
+Completed in 6ms (View: 5, DB: 1) | 200 OK [http://test.host/homeworks/953125641/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+
+
+Processing HomeworksController#index (for 0.0.0.0 at 2009-09-17 15:49:34) [GET]
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;36;1mHomework Load (0.2ms)[0m   [0;1mSELECT `homeworks`.* FROM `homeworks` INNER JOIN `subjects` ON `subjects`.id = `homeworks`.subject_id WHERE (subjects.user_id = 745185059 and homeworks.when >= '2009-09-17') [0m
+Rendering template within layouts/main
+Rendering homeworks/index
+Rendered homeworks/_homeworks (0.5ms)
+Rendered layouts/_google_analytics (0.0ms)
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/homeworks]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+
+
+Processing HomeworksController#new (for 0.0.0.0 at 2009-09-17 15:49:34) [GET]
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering homeworks/new
+  [4;35;1mSubject Load (0.2ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.user_id = 745185059) [0m
+Rendered homeworks/_form (1.7ms)
+Rendered layouts/_google_analytics (0.0ms)
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/homeworks/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+
+
+Processing HomeworksController#create (for 0.0.0.0 at 2009-09-17 15:49:34) [POST]
+  Parameters: {"homework"=>{}}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering template within layouts/main
+Rendering homeworks/new
+  [4;36;1mSubject Load (0.2ms)[0m   [0;1mSELECT * FROM `subjects` WHERE (`subjects`.user_id = 745185059) [0m
+Rendered homeworks/_form (1.7ms)
+Rendered layouts/_google_analytics (0.0ms)
+Completed in 5ms (View: 3, DB: 1) | 200 OK [http://test.host/homeworks?]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mHomework Load (0.2ms)[0m   [0mSELECT * FROM `homeworks` WHERE (`homeworks`.`id` = 953125641) [0m
+
+
+Processing HomeworksController#index (for 0.0.0.0 at 2009-09-17 15:49:34) [GET]
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/homeworks]
+
+
+Processing HomeworksController#new (for 0.0.0.0 at 2009-09-17 15:49:34) [GET]
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/homeworks]
+
+
+Processing HomeworksController#create (for 0.0.0.0 at 2009-09-17 15:49:34) [POST]
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/homeworks]
+
+
+Processing HomeworksController#show (for 0.0.0.0 at 2009-09-17 15:49:34) [GET]
+  Parameters: {"id"=>"953125641"}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/homeworks]
+
+
+Processing HomeworksController#edit (for 0.0.0.0 at 2009-09-17 15:49:34) [GET]
+  Parameters: {"id"=>"953125641"}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/homeworks]
+
+
+Processing HomeworksController#update (for 0.0.0.0 at 2009-09-17 15:49:34) [PUT]
+  Parameters: {"id"=>"953125641"}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/homeworks]
+
+
+Processing HomeworksController#destroy (for 0.0.0.0 at 2009-09-17 15:49:34) [DELETE]
+  Parameters: {"id"=>"953125641"}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/homeworks]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mHomework Load (0.1ms)[0m   [0mSELECT * FROM `homeworks` WHERE (`homeworks`.`id` = 953125641) [0m
+
+
+Processing HomeworksController#status (for 0.0.0.0 at 2009-09-17 15:49:34) [GET]
+  Parameters: {"status"=>"not", "id"=>"953125641"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;35;1mSubjectLesson Load (0.3ms)[0m   [0mSELECT `subject_lessons`.* FROM `subject_lessons` INNER JOIN `subjects` ON `subjects`.id = `subject_lessons`.subject_id WHERE (day = 5 AND subjects.user_id=745185059) GROUP BY subject_id[0m
+  [4;36;1mHomework Load (0.1ms)[0m   [0;1mSELECT * FROM `homeworks` WHERE (`homeworks`.`id` = '953125641') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Rendering homeworks/status
+Rendered overview/_update_subjects (0.0ms)
+Completed in 4ms (View: 1, DB: 1) | 200 OK [http://test.host/homeworks/953125641/status?status=not]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;36;1mHomework Load (0.1ms)[0m   [0;1mSELECT * FROM `homeworks` WHERE (`homeworks`.`id` = 953125641) [0m
+
+
+Processing HomeworksController#status (for 0.0.0.0 at 2009-09-17 15:49:34) [GET]
+  Parameters: {"status"=>"done", "id"=>"953125641"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;36;1mSubjectLesson Load (0.2ms)[0m   [0;1mSELECT `subject_lessons`.* FROM `subject_lessons` INNER JOIN `subjects` ON `subjects`.id = `subject_lessons`.subject_id WHERE (day = 5 AND subjects.user_id=745185059) GROUP BY subject_id[0m
+  [4;35;1mHomework Load (0.1ms)[0m   [0mSELECT * FROM `homeworks` WHERE (`homeworks`.`id` = '953125641') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mHomework Update (0.2ms)[0m   [0mUPDATE `homeworks` SET `length_done` = 30 WHERE `id` = 953125641[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Rendering homeworks/status
+Rendered overview/_update_subjects (0.0ms)
+Completed in 3ms (View: 0, DB: 1) | 200 OK [http://test.host/homeworks/953125641/status?status=done]
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+
+
+Processing HomeworksController#new (for 0.0.0.0 at 2009-09-17 15:49:34) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+Rendering homeworks/new
+  [4;35;1mSubject Load (0.2ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.user_id = 745185059) [0m
+Rendered homeworks/_form (1.8ms)
+Completed in 3ms (View: 2, DB: 1) | 200 OK [http://test.host/homeworks/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mHomework Load (0.1ms)[0m   [0mSELECT * FROM `homeworks` WHERE (`homeworks`.`id` = 953125641) [0m
+
+
+Processing HomeworksController#show (for 0.0.0.0 at 2009-09-17 15:49:34) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;35;1mHomework Load (0.1ms)[0m   [0mSELECT * FROM `homeworks` WHERE (`homeworks`.`id` = 953125641) [0m
+Rendering template within layouts/main
+Rendering homeworks/show
+Rendered layouts/_google_analytics (0.0ms)
+Completed in 3ms (View: 2, DB: 1) | 200 OK [http://test.host/homeworks/953125641]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mHomework Load (0.1ms)[0m   [0mSELECT * FROM `homeworks` WHERE (`homeworks`.`id` = 953125641) [0m
+
+
+Processing HomeworksController#update (for 0.0.0.0 at 2009-09-17 15:49:34) [PUT]
+  Parameters: {"id"=>"953125641", "homework"=>{}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;35;1mHomework Load (0.1ms)[0m   [0mSELECT * FROM `homeworks` WHERE (`homeworks`.`id` = 953125641) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/homeworks
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/homeworks/953125641?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `notes` [0m
+
+
+Processing NotesController#create (for 0.0.0.0 at 2009-09-17 15:49:34) [POST]
+  Parameters: {"note"=>{}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mNote Create (0.2ms)[0m   [0;1mINSERT INTO `notes` (`updated_at`, `weight`, `description`, `subject_id`, `note`, `created_at`) VALUES('2009-09-17 13:49:34', NULL, NULL, NULL, NULL, '2009-09-17 13:49:34')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/notes
+Completed in 6ms (DB: 1) | 302 Found [http://test.host/notes?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `notes` [0m
+  [4;35;1mSQL (0.8ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `notes` [0m
+  [4;35;1mNote Load (0.2ms)[0m   [0mSELECT * FROM `notes` WHERE (`notes`.`id` = 953125641) [0m
+
+
+Processing NotesController#destroy (for 0.0.0.0 at 2009-09-17 15:49:34) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;35;1mNote Load (0.1ms)[0m   [0mSELECT * FROM `notes` WHERE (`notes`.`id` = 953125641) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mNote Destroy (0.1ms)[0m   [0mDELETE FROM `notes` WHERE `id` = 953125641[0m
+  [4;36;1mSubject Load (0.2ms)[0m   [0;1mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 619423396) [0m
+  [4;35;1mNote Load (0.1ms)[0m   [0mSELECT * FROM `notes` WHERE (`notes`.subject_id = 619423396) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT sum(`notes`.note) AS sum_note FROM `notes` WHERE (`notes`.subject_id = 619423396) [0m
+  [4;35;1mSubject Update (0.2ms)[0m   [0mUPDATE `subjects` SET `average` = 1.5, `updated_at` = '2009-09-17 13:49:34' WHERE `id` = 619423396[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/notes
+Completed in 5ms (DB: 3) | 302 Found [http://test.host/notes/953125641]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `notes` [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mNote Load (0.1ms)[0m   [0mSELECT * FROM `notes` WHERE (`notes`.`id` = 953125641) [0m
+
+
+Processing NotesController#edit (for 0.0.0.0 at 2009-09-17 15:49:34) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;35;1mNote Load (0.1ms)[0m   [0mSELECT * FROM `notes` WHERE (`notes`.`id` = 953125641) [0m
+Rendering template within layouts/main
+Rendering notes/edit
+  [4;36;1mSubject Load (0.2ms)[0m   [0;1mSELECT * FROM `subjects` WHERE (`subjects`.user_id = 745185059) [0m
+Rendered notes/_form (2.4ms)
+Rendered layouts/_google_analytics (0.1ms)
+Completed in 5ms (View: 4, DB: 1) | 200 OK [http://test.host/notes/953125641/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+
+
+Processing NotesController#index (for 0.0.0.0 at 2009-09-17 15:49:34) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;35;1mNote Load (0.2ms)[0m   [0mSELECT `notes`.* FROM `notes` INNER JOIN `subjects` ON `subjects`.id = `notes`.subject_id WHERE (subjects.user_id = 745185059) [0m
+  [4;36;1mSubject Load (0.2ms)[0m   [0;1mSELECT * FROM `subjects` WHERE (`subjects`.user_id = 745185059) [0m
+  [4;35;1mSubject Load (0.2ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 619423396) [0m
+  [4;36;1mSubject Load (0.1ms)[0m   [0;1mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 619423396) [0m
+Rendering template within layouts/main
+Rendering notes/index
+Rendered notes/_subject (2.5ms)
+Rendered notes/_subject (0.9ms)
+Rendered layouts/_google_analytics (0.0ms)
+Completed in 8ms (View: 6, DB: 1) | 200 OK [http://test.host/notes]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+
+
+Processing NotesController#new (for 0.0.0.0 at 2009-09-17 15:49:34) [GET]
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering notes/new
+  [4;35;1mSubject Load (0.2ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.user_id = 745185059) [0m
+Rendered notes/_form (1.6ms)
+Rendered layouts/_google_analytics (0.0ms)
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/notes/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mNote Load (0.1ms)[0m   [0mSELECT * FROM `notes` WHERE (`notes`.`id` = 953125641) [0m
+
+
+Processing NotesController#show (for 0.0.0.0 at 2009-09-17 15:49:34) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;35;1mNote Load (0.1ms)[0m   [0mSELECT * FROM `notes` WHERE (`notes`.`id` = 953125641) [0m
+Rendering template within layouts/main
+Rendering notes/show
+Rendered layouts/_google_analytics (0.1ms)
+Completed in 3ms (View: 2, DB: 1) | 200 OK [http://test.host/notes/953125641]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mNote Load (0.1ms)[0m   [0mSELECT * FROM `notes` WHERE (`notes`.`id` = 953125641) [0m
+
+
+Processing NotesController#update (for 0.0.0.0 at 2009-09-17 15:49:34) [PUT]
+  Parameters: {"id"=>"953125641", "note"=>{}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;35;1mNote Load (0.1ms)[0m   [0mSELECT * FROM `notes` WHERE (`notes`.`id` = 953125641) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSubject Load (0.2ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 619423396) [0m
+  [4;36;1mNote Load (0.1ms)[0m   [0;1mSELECT * FROM `notes` WHERE (`notes`.subject_id = 619423396) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT sum(`notes`.note) AS sum_note FROM `notes` WHERE (`notes`.subject_id = 619423396) [0m
+  [4;36;1mSubject Update (0.2ms)[0m   [0;1mUPDATE `subjects` SET `average` = 1.25, `updated_at` = '2009-09-17 13:49:34' WHERE `id` = 619423396[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/notes
+Completed in 4ms (DB: 2) | 302 Found [http://test.host/notes/953125641?]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+
+
+Processing OverviewController#index (for 0.0.0.0 at 2009-09-17 15:49:34) [GET]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;36;1mSubjectLesson Load (0.2ms)[0m   [0;1mSELECT `subject_lessons`.* FROM `subject_lessons` INNER JOIN `subjects` ON `subjects`.id = `subject_lessons`.subject_id WHERE (day = 5 AND subjects.user_id=745185059) GROUP BY subject_id[0m
+  [4;35;1mHomework Load (0.2ms)[0m   [0mSELECT `homeworks`.* FROM `homeworks` INNER JOIN `subjects` ON `subjects`.id = `homeworks`.subject_id WHERE (subjects.user_id = 745185059 and homeworks.when >= '2009-09-17') [0m
+  [4;36;1mExam Load (0.4ms)[0m   [0;1mSELECT `exams`.* FROM `exams` INNER JOIN `subjects` ON `subjects`.id = `exams`.subject_id WHERE (subjects.user_id = 745185059 and exams.when >= '2009-09-17') [0m
+Rendering template within layouts/main
+Rendering overview/index
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT sum(`subjects`.time) AS sum_time FROM `subjects` WHERE (`subjects`.user_id = 745185059) [0m
+Rendered overview/_side (0.5ms)
+Rendered layouts/_google_analytics (0.0ms)
+Completed in 59ms (View: 4, DB: 2) | 200 OK [http://test.host/overview]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+
+
+Processing OverviewController#index (for 0.0.0.0 at 2009-09-17 15:49:34) [GET]
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;36;1mSubjectLesson Load (0.2ms)[0m   [0;1mSELECT `subject_lessons`.* FROM `subject_lessons` INNER JOIN `subjects` ON `subjects`.id = `subject_lessons`.subject_id WHERE (day = 5 AND subjects.user_id=745185059) GROUP BY subject_id[0m
+  [4;35;1mHomework Load (0.2ms)[0m   [0mSELECT `homeworks`.* FROM `homeworks` INNER JOIN `subjects` ON `subjects`.id = `homeworks`.subject_id WHERE (subjects.user_id = 745185059 and homeworks.when >= '2009-09-17') [0m
+  [4;36;1mExam Load (0.2ms)[0m   [0;1mSELECT `exams`.* FROM `exams` INNER JOIN `subjects` ON `subjects`.id = `exams`.subject_id WHERE (subjects.user_id = 745185059 and exams.when >= '2009-09-17') [0m
+Rendering template within layouts/main
+Rendering overview/index
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT sum(`subjects`.time) AS sum_time FROM `subjects` WHERE (`subjects`.user_id = 745185059) [0m
+Rendered overview/_side (0.1ms)
+Rendered layouts/_google_analytics (0.0ms)
+Completed in 6ms (View: 3, DB: 1) | 200 OK [http://test.host/overview]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mSubject Load (0.2ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 619423396) [0m
+
+
+Processing OverviewController#setComplete (for 0.0.0.0 at 2009-09-17 15:49:34) [GET]
+  Parameters: {"id"=>"619423396"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;35;1mSubject Load (0.2ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.`id` = '619423396') AND (`subjects`.user_id = 745185059) LIMIT 1[0m
+  [4;36;1mLessonPrepare Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `lesson_prepares`[0m
+  [4;35;1mLessonPrepare Load (0.1ms)[0m   [0mSELECT * FROM `lesson_prepares` WHERE (`lesson_prepares`.`date` = '2009-09-17') AND (`lesson_prepares`.subject_id = 619423396) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mLessonPrepare Create (0.2ms)[0m   [0mINSERT INTO `lesson_prepares` (`date`, `length_done`, `subject_id`) VALUES('2009-09-17', 0, 619423396)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSubjectLesson Load (0.3ms)[0m   [0mSELECT `subject_lessons`.* FROM `subject_lessons` INNER JOIN `subjects` ON `subjects`.id = `subject_lessons`.subject_id WHERE (day = 5 AND subjects.user_id=745185059) GROUP BY subject_id[0m
+Rendering overview/setComplete
+Rendered overview/_update_subjects (0.0ms)
+Completed in 40ms (View: 1, DB: 3) | 200 OK [http://test.host/overview/619423396/setComplete]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+
+
+Processing OverviewController#index (for 0.0.0.0 at 2009-09-17 15:49:34) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;35;1mSubjectLesson Load (0.2ms)[0m   [0mSELECT `subject_lessons`.* FROM `subject_lessons` INNER JOIN `subjects` ON `subjects`.id = `subject_lessons`.subject_id WHERE (day = 5 AND subjects.user_id=745185059) GROUP BY subject_id[0m
+  [4;36;1mHomework Load (0.2ms)[0m   [0;1mSELECT `homeworks`.* FROM `homeworks` INNER JOIN `subjects` ON `subjects`.id = `homeworks`.subject_id WHERE (subjects.user_id = 745185059 and homeworks.when >= '2009-09-17') [0m
+  [4;35;1mExam Load (0.2ms)[0m   [0mSELECT `exams`.* FROM `exams` INNER JOIN `subjects` ON `subjects`.id = `exams`.subject_id WHERE (subjects.user_id = 745185059 and exams.when >= '2009-09-17') [0m
+Rendering template within layouts/main
+Rendering overview/index
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT sum(`subjects`.time) AS sum_time FROM `subjects` WHERE (`subjects`.user_id = 745185059) [0m
+Rendered overview/_side (0.1ms)
+Rendered layouts/_google_analytics (0.0ms)
+Completed in 5ms (View: 2, DB: 2) | 200 OK [http://test.host/overview]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT sum(`subjects`.time) AS sum_time FROM `subjects` WHERE (`subjects`.user_id = 745185059) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+
+
+Processing OverviewController#index (for 0.0.0.0 at 2009-09-17 15:49:34) [GET]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;36;1mSubjectLesson Load (0.2ms)[0m   [0;1mSELECT `subject_lessons`.* FROM `subject_lessons` INNER JOIN `subjects` ON `subjects`.id = `subject_lessons`.subject_id WHERE (day = 5 AND subjects.user_id=745185059) GROUP BY subject_id[0m
+  [4;35;1mHomework Load (0.2ms)[0m   [0mSELECT `homeworks`.* FROM `homeworks` INNER JOIN `subjects` ON `subjects`.id = `homeworks`.subject_id WHERE (subjects.user_id = 745185059 and homeworks.when >= '2009-09-17') [0m
+  [4;36;1mExam Load (0.2ms)[0m   [0;1mSELECT `exams`.* FROM `exams` INNER JOIN `subjects` ON `subjects`.id = `exams`.subject_id WHERE (subjects.user_id = 745185059 and exams.when >= '2009-09-17') [0m
+Rendering template within layouts/main
+Rendering overview/index
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT sum(`subjects`.time) AS sum_time FROM `subjects` WHERE (`subjects`.user_id = 745185059) [0m
+Rendered overview/_side (0.1ms)
+Rendered layouts/_google_analytics (0.0ms)
+Completed in 5ms (View: 2, DB: 1) | 200 OK [http://test.host/overview]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `remember_token_expires_at` = '2009-10-01 13:49:34', `remember_token` = '92c6e87cb27d81eb22036c77776aab017092931d', `updated_at` = '2009-09-17 13:49:34' WHERE `id` = 745185059[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `remember_token_expires_at` = '2009-10-01 13:49:34', `remember_token` = '92c6e87cb27d81eb22036c77776aab017092931d', `updated_at` = '2009-09-17 13:49:34' WHERE `id` = 745185059[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mUser Update (0.1ms)[0m   [0;1mUPDATE `users` SET `remember_token_expires_at` = '2009-09-17 13:44:34', `updated_at` = '2009-09-17 13:49:34' WHERE `id` = 745185059[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (8.9ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `remember_token_expires_at` = '2009-10-01 13:49:34', `remember_token` = '92c6e87cb27d81eb22036c77776aab017092931d', `updated_at` = '2009-09-17 13:49:34' WHERE `id` = 745185059[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `subject_lessons` [0m
+
+
+Processing SubjectLessonsController#create (for 0.0.0.0 at 2009-09-17 15:49:34) [POST]
+  Parameters: {"subject_lesson"=>{}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSubjectLesson Create (0.1ms)[0m   [0mINSERT INTO `subject_lessons` (`updated_at`, `lesson`, `day`, `subject_id`, `created_at`) VALUES('2009-09-17 13:49:34', NULL, NULL, NULL, '2009-09-17 13:49:34')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/subject_lessons/996332878
+Completed in 4ms (DB: 29) | 302 Found [http://test.host/subject_lessons?]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `subject_lessons` [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `subject_lessons` [0m
+  [4;35;1mSubjectLesson Load (0.1ms)[0m   [0mSELECT * FROM `subject_lessons` WHERE (`subject_lessons`.`id` = 953125641) [0m
+
+
+Processing SubjectLessonsController#destroy (for 0.0.0.0 at 2009-09-17 15:49:34) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mSubjectLesson Load (0.1ms)[0m   [0;1mSELECT * FROM `subject_lessons` WHERE (`subject_lessons`.`id` = 953125641) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSubjectLesson Destroy (0.1ms)[0m   [0;1mDELETE FROM `subject_lessons` WHERE `id` = 953125641[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/subject_lessons
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/subject_lessons/953125641]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `subject_lessons` [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSubjectLesson Load (0.1ms)[0m   [0mSELECT * FROM `subject_lessons` WHERE (`subject_lessons`.`id` = 953125641) [0m
+
+
+Processing SubjectLessonsController#edit (for 0.0.0.0 at 2009-09-17 15:49:34) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mSubjectLesson Load (0.1ms)[0m   [0;1mSELECT * FROM `subject_lessons` WHERE (`subject_lessons`.`id` = 953125641) [0m
+Rendering template within layouts/main
+Rendering subject_lessons/edit
+Rendered layouts/_google_analytics (0.0ms)
+Completed in 3ms (View: 3, DB: 1) | 200 OK [http://test.host/subject_lessons/953125641/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing SubjectLessonsController#index (for 0.0.0.0 at 2009-09-17 15:49:34) [GET]
+  [4;35;1mSubjectLesson Load (0.2ms)[0m   [0mSELECT * FROM `subject_lessons` [0m
+Rendering template within layouts/main
+Rendering subject_lessons/index
+Rendered layouts/_google_analytics (0.0ms)
+Completed in 3ms (View: 3, DB: 0) | 200 OK [http://test.host/subject_lessons]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing SubjectLessonsController#new (for 0.0.0.0 at 2009-09-17 15:49:34) [GET]
+Rendering template within layouts/main
+Rendering subject_lessons/new
+Rendered layouts/_google_analytics (0.0ms)
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://test.host/subject_lessons/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSubjectLesson Load (0.2ms)[0m   [0;1mSELECT * FROM `subject_lessons` WHERE (`subject_lessons`.`id` = 953125641) [0m
+
+
+Processing SubjectLessonsController#show (for 0.0.0.0 at 2009-09-17 15:49:34) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mSubjectLesson Load (0.1ms)[0m   [0mSELECT * FROM `subject_lessons` WHERE (`subject_lessons`.`id` = 953125641) [0m
+Rendering template within layouts/main
+Rendering subject_lessons/show
+Rendered layouts/_google_analytics (0.0ms)
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://test.host/subject_lessons/953125641]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSubjectLesson Load (0.1ms)[0m   [0;1mSELECT * FROM `subject_lessons` WHERE (`subject_lessons`.`id` = 953125641) [0m
+
+
+Processing SubjectLessonsController#update (for 0.0.0.0 at 2009-09-17 15:49:34) [PUT]
+  Parameters: {"subject_lesson"=>{}, "id"=>"953125641"}
+  [4;35;1mSubjectLesson Load (0.1ms)[0m   [0mSELECT * FROM `subject_lessons` WHERE (`subject_lessons`.`id` = 953125641) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/subject_lessons/953125641
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/subject_lessons/953125641?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mSubject Load (0.2ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 619423396) [0m
+
+
+Processing SubjectsController#destroy to js (for 0.0.0.0 at 2009-09-17 15:49:34) [DELETE]
+  Parameters: {"id"=>"619423396"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;35;1mSubject Load (0.2ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 619423396) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSubject Destroy (0.2ms)[0m   [0mDELETE FROM `subjects` WHERE `id` = 619423396[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Rendering subjects/destroy
+Completed in 3ms (View: 0, DB: 1) | 200 OK [http://test.host/subjects/destroy/619423396.js]
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `subjects` [0m
+
+
+Processing SubjectsController#create (for 0.0.0.0 at 2009-09-17 15:49:34) [POST]
+  Parameters: {"subject"=>{"title"=>"Anglictina"}}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSubject Create (0.2ms)[0m   [0mINSERT INTO `subjects` (`updated_at`, `title`, `time`, `priority`, `type`, `color`, `average`, `user_id`, `created_at`) VALUES('2009-09-17 13:49:34', 'Anglictina', NULL, NULL, NULL, NULL, NULL, 745185059, '2009-09-17 13:49:34')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/subjects
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/subjects?subject%5Btitle%5D=Anglictina]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `subjects` [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `subjects` [0m
+  [4;36;1mSubject Load (0.1ms)[0m   [0;1mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 925307922) [0m
+
+
+Processing SubjectsController#destroy (for 0.0.0.0 at 2009-09-17 15:49:34) [DELETE]
+  Parameters: {"id"=>"925307922"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;36;1mSubject Load (0.1ms)[0m   [0;1mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 925307922) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSubject Destroy (0.1ms)[0m   [0;1mDELETE FROM `subjects` WHERE `id` = 925307922[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/subjects/settings
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/subjects/destroy/925307922]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `subjects` [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;36;1mSubject Load (0.2ms)[0m   [0;1mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 619423396) [0m
+
+
+Processing SubjectsController#edit (for 0.0.0.0 at 2009-09-17 15:49:34) [GET]
+  Parameters: {"id"=>"619423396"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;36;1mSubject Load (0.1ms)[0m   [0;1mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 619423396) [0m
+Rendering template within layouts/main
+Rendering subjects/edit
+Rendered layouts/_google_analytics (0.1ms)
+Completed in 5ms (View: 4, DB: 1) | 200 OK [http://test.host/subjects/619423396/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+
+
+Processing SubjectsController#index (for 0.0.0.0 at 2009-09-17 15:49:34) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;35;1mSubject Load (0.2ms)[0m   [0mSELECT * FROM `subjects` WHERE (user_id = 745185059) [0m
+  [4;36;1mSubjectLesson Load (0.2ms)[0m   [0;1mSELECT `subject_lessons`.* FROM `subject_lessons` INNER JOIN `subjects` ON `subjects`.id = `subject_lessons`.subject_id WHERE (subjects.user_id = 745185059) [0m
+Rendering template within layouts/main
+Rendering subjects/index
+Rendered layouts/_google_analytics (0.1ms)
+Completed in 8ms (View: 7, DB: 1) | 200 OK [http://test.host/subjects]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+
+
+Processing SubjectsController#new (for 0.0.0.0 at 2009-09-17 15:49:34) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering subjects/new
+Rendered layouts/_google_analytics (0.1ms)
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/subjects/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;36;1mSubject Load (0.2ms)[0m   [0;1mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 619423396) [0m
+
+
+Processing SubjectsController#update (for 0.0.0.0 at 2009-09-17 15:49:34) [PUT]
+  Parameters: {"id"=>"619423396", "subject"=>{}}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;36;1mSubject Load (0.1ms)[0m   [0;1mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 619423396) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/subjects
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/subjects/619423396?]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (login = 'aaron' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 317248456) [0m
+
+
+Processing UsersController#activate (for 0.0.0.0 at 2009-09-17 15:49:34) [GET]
+  Parameters: {"activation_code"=>"8f24789ae988411ccf33ab0c30fe9106fab32e9a"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`activation_code` = '8f24789ae988411ccf33ab0c30fe9106fab32e9a') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `activated_at` = '2009-09-17 13:49:34', `activation_code` = NULL, `updated_at` = '2009-09-17 13:49:34' WHERE `id` = 317248456[0m
+Sent mail to aaron@example.com
+
+Date: Thu, 17 Sep 2009 15:49:34 +0200
+From: oracle@edukit.sk
+To: aaron@example.com
+Subject: =?utf-8?Q?Edukit=3A_Tvoje_konto_bolo_aktivovan=C3=A9=21?=
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+aaron, tvoje konto bolo aktivované. Môžeš začať využívať Edukit.
+
+  http://www.edukit.sk/
+  [4;36;1mSQL (1.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed in 137ms (DB: 2) | 302 Found [http://test.host/aktivacia/8f24789ae988411ccf33ab0c30fe9106fab32e9a]
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (login = 'aaron' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;36;1mSQL (16.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2009-09-17 15:49:35) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"quire", "password"=>"quire", "login"=>"quire", "email"=>"quire@example.com"}}
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mUser Exists (0.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'quire@example.com') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`salt`, `updated_at`, `activated_at`, `crypted_password`, `openid_url`, `remember_token_expires_at`, `activation_code`, `remember_token`, `login`, `email`, `created_at`) VALUES('14e88eb4160977b579eb3b5f8a4c98088c1796e7', '2009-09-17 13:49:35', NULL, '5167545e6a9c6e1199ceb6603aab57e4296dbe2a', NULL, NULL, '5d4fd780fa34f531f2257fb25c63d99952e9e53c', NULL, 'quire', 'quire@example.com', '2009-09-17 13:49:35')[0m
+Sent mail to quire@example.com
+
+Date: Thu, 17 Sep 2009 15:49:35 +0200
+From: oracle@edukit.sk
+To: quire@example.com
+Subject: =?utf-8?Q?Edukit=3A_Tvoje_konto_je_vytvoren=C3=A9=2E_Teraz_si_ho_aktivuj=2E?=
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Tvoje konto bolo vytvorené:
+
+  Meno: quire
+  Heslo: quire
+
+Klikni na tento odkaz, aby si si aktivoval svoje konto:
+
+  http://www.edukit.sk/aktivacia/5d4fd780fa34f531f2257fb25c63d99952e9e53c
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/subjects
+Completed in 366ms (DB: 18) | 302 Found [http://test.host/users?user%5Bemail%5D=quire%40example.com&user%5Blogin%5D=quire&user%5Bpassword%5D=quire&user%5Bpassword_confirmation%5D=quire]
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing UsersController#activate (for 0.0.0.0 at 2009-09-17 15:49:35) [GET]
+  Parameters: {"activation_code"=>""}
+Redirected to http://test.host/
+Completed in 0ms (DB: 1) | 302 Found [http://test.host/aktivacia/]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing UsersController#activate (for 0.0.0.0 at 2009-09-17 15:49:35) [GET]
+Redirected to http://test.host/
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/users/activate]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2009-09-17 15:49:35) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"quire", "password"=>"quire", "login"=>"quire", "email"=>nil}}
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering template within layouts/main
+Rendering users/new
+Rendered users/_registration (2.9ms)
+Rendered layouts/_google_analytics (0.1ms)
+Completed in 9ms (View: 5, DB: 1) | 200 OK [http://test.host/users?user%5Bemail%5D=&user%5Blogin%5D=quire&user%5Bpassword%5D=quire&user%5Bpassword_confirmation%5D=quire]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2009-09-17 15:49:35) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"quire", "password"=>"quire", "login"=>nil, "email"=>"quire@example.com"}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`login` IS NULL) LIMIT 1[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering template within layouts/main
+Rendering users/new
+Rendered users/_registration (1.3ms)
+Rendered layouts/_google_analytics (0.1ms)
+Completed in 6ms (View: 3, DB: 1) | 200 OK [http://test.host/users?user%5Bemail%5D=quire%40example.com&user%5Blogin%5D=&user%5Bpassword%5D=quire&user%5Bpassword_confirmation%5D=quire]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2009-09-17 15:49:35) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>nil, "password"=>"quire", "login"=>"quire", "email"=>"quire@example.com"}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering template within layouts/main
+Rendering users/new
+Rendered users/_registration (1.2ms)
+Rendered layouts/_google_analytics (0.1ms)
+Completed in 6ms (View: 3, DB: 1) | 200 OK [http://test.host/users?user%5Bemail%5D=quire%40example.com&user%5Blogin%5D=quire&user%5Bpassword%5D=quire&user%5Bpassword_confirmation%5D=]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2009-09-17 15:49:35) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"quire", "password"=>nil, "login"=>"quire", "email"=>"quire@example.com"}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering template within layouts/main
+Rendering users/new
+Rendered users/_registration (1.3ms)
+Rendered layouts/_google_analytics (0.1ms)
+Completed in 6ms (View: 3, DB: 1) | 200 OK [http://test.host/users?user%5Bemail%5D=quire%40example.com&user%5Blogin%5D=quire&user%5Bpassword%5D=&user%5Bpassword_confirmation%5D=quire]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2009-09-17 15:49:35) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"quire", "password"=>"quire", "login"=>"quire", "email"=>"quire@example.com"}}
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'quire@example.com') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`salt`, `updated_at`, `activated_at`, `crypted_password`, `openid_url`, `remember_token_expires_at`, `activation_code`, `remember_token`, `login`, `email`, `created_at`) VALUES('14e88eb4160977b579eb3b5f8a4c98088c1796e7', '2009-09-17 13:49:35', NULL, '5167545e6a9c6e1199ceb6603aab57e4296dbe2a', NULL, NULL, '4744c4f79f404c0f1645e1573f9a311ab6d25b83', NULL, 'quire', 'quire@example.com', '2009-09-17 13:49:35')[0m
+Sent mail to quire@example.com
+
+Date: Thu, 17 Sep 2009 15:49:35 +0200
+From: oracle@edukit.sk
+To: quire@example.com
+Subject: =?utf-8?Q?Edukit=3A_Tvoje_konto_je_vytvoren=C3=A9=2E_Teraz_si_ho_aktivuj=2E?=
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Tvoje konto bolo vytvorené:
+
+  Meno: quire
+  Heslo: quire
+
+Klikni na tento odkaz, aby si si aktivoval svoje konto:
+
+  http://www.edukit.sk/aktivacia/4744c4f79f404c0f1645e1573f9a311ab6d25b83
+  [4;35;1mSQL (1.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/subjects
+Completed in 21ms (DB: 2) | 302 Found [http://test.host/users?user%5Bemail%5D=quire%40example.com&user%5Blogin%5D=quire&user%5Bpassword%5D=quire&user%5Bpassword_confirmation%5D=quire]
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185061) [0m
+  [4;35;1mSQL (18.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `exams` [0m
+
+
+Processing ExamsController#create (for 0.0.0.0 at 2009-09-17 15:50:22) [POST]
+  Parameters: {"exam"=>{"when"=>"5.8.2009"}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mExam Create (0.1ms)[0m   [0;1mINSERT INTO `exams` (`notes`, `length_done`, `length`, `subject_id`, `when`) VALUES(NULL, 0, NULL, NULL, '2009-08-05')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/exams
+Completed in 5ms (DB: 24) | 302 Found [http://test.host/exams?exam%5Bwhen%5D=5.8.2009]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `exams` [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `exams` [0m
+  [4;35;1mSubject Load (0.2ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 619423396) [0m
+
+
+Processing ExamsController#create (for 0.0.0.0 at 2009-09-17 15:50:22) [POST]
+  Parameters: {"exam"=>{"subject_id"=>619423396, "when"=>"4.7.2009"}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mExam Create (0.1ms)[0m   [0;1mINSERT INTO `exams` (`notes`, `length_done`, `length`, `subject_id`, `when`) VALUES(NULL, 0, NULL, 619423396, '2009-07-04')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Rendering exams/create
+  [4;36;1mSubject Load (0.2ms)[0m   [0;1mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 619423396) [0m
+Rendered exams/_exam (3.1ms)
+Completed in 8ms (View: 5, DB: 2) | 200 OK [http://test.host/exams?exam%5Bsubject_id%5D=619423396&exam%5Bwhen%5D=4.7.2009]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `exams` [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `exams` [0m
+  [4;36;1mExam Load (0.1ms)[0m   [0;1mSELECT * FROM `exams` WHERE (`exams`.`id` = 953125641) [0m
+
+
+Processing ExamsController#destroy (for 0.0.0.0 at 2009-09-17 15:50:22) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;36;1mExam Load (0.1ms)[0m   [0;1mSELECT * FROM `exams` WHERE (`exams`.`id` = 953125641) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mExam Destroy (0.1ms)[0m   [0;1mDELETE FROM `exams` WHERE `id` = 953125641[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/exams
+Completed in 2ms (DB: 2) | 302 Found [http://test.host/exams/953125641/destroy]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `exams` [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;36;1mExam Load (0.2ms)[0m   [0;1mSELECT * FROM `exams` WHERE (`exams`.`id` = 953125641) [0m
+
+
+Processing ExamsController#edit (for 0.0.0.0 at 2009-09-17 15:50:22) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;36;1mExam Load (0.1ms)[0m   [0;1mSELECT * FROM `exams` WHERE (`exams`.`id` = 953125641) [0m
+Rendering template within layouts/main
+Rendering exams/edit
+  [4;35;1mSubject Load (0.2ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.user_id = 745185059) [0m
+Rendered exams/_form (4.7ms)
+Rendered layouts/_google_analytics (0.4ms)
+Completed in 12ms (View: 11, DB: 1) | 200 OK [http://test.host/exams/953125641/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+
+
+Processing ExamsController#index (for 0.0.0.0 at 2009-09-17 15:50:22) [GET]
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;36;1mExam Load (0.3ms)[0m   [0;1mSELECT `exams`.* FROM `exams` INNER JOIN `subjects` ON `subjects`.id = `exams`.subject_id WHERE (subjects.user_id = 745185059 and exams.when >= '2009-09-17') [0m
+Rendering template within layouts/main
+Rendering exams/index
+Rendered exams/_exams (0.5ms)
+Rendered layouts/_google_analytics (0.0ms)
+Completed in 5ms (View: 3, DB: 1) | 200 OK [http://test.host/exams]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+
+
+Processing ExamsController#new (for 0.0.0.0 at 2009-09-17 15:50:22) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering exams/new
+  [4;35;1mSubject Load (0.2ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.user_id = 745185059) [0m
+Rendered exams/_form (1.8ms)
+Rendered layouts/_google_analytics (0.0ms)
+Completed in 4ms (View: 4, DB: 1) | 200 OK [http://test.host/exams/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+
+
+Processing ExamsController#create (for 0.0.0.0 at 2009-09-17 15:50:22) [POST]
+  Parameters: {"exam"=>{}}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering template within layouts/main
+Rendering exams/new
+  [4;36;1mSubject Load (0.2ms)[0m   [0;1mSELECT * FROM `subjects` WHERE (`subjects`.user_id = 745185059) [0m
+Rendered exams/_form (1.7ms)
+Rendered layouts/_google_analytics (0.0ms)
+Completed in 5ms (View: 3, DB: 1) | 200 OK [http://test.host/exams?]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mExam Load (0.1ms)[0m   [0mSELECT * FROM `exams` WHERE (`exams`.`id` = 953125641) [0m
+
+
+Processing ExamsController#index (for 0.0.0.0 at 2009-09-17 15:50:22) [GET]
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/exams]
+
+
+Processing ExamsController#new (for 0.0.0.0 at 2009-09-17 15:50:22) [GET]
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/exams]
+
+
+Processing ExamsController#create (for 0.0.0.0 at 2009-09-17 15:50:22) [POST]
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/exams]
+
+
+Processing ExamsController#show (for 0.0.0.0 at 2009-09-17 15:50:22) [GET]
+  Parameters: {"id"=>"953125641"}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/exams]
+
+
+Processing ExamsController#edit (for 0.0.0.0 at 2009-09-17 15:50:22) [GET]
+  Parameters: {"id"=>"953125641"}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/exams]
+
+
+Processing ExamsController#update (for 0.0.0.0 at 2009-09-17 15:50:22) [PUT]
+  Parameters: {"id"=>"953125641"}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/exams]
+
+
+Processing ExamsController#destroy (for 0.0.0.0 at 2009-09-17 15:50:22) [DELETE]
+  Parameters: {"id"=>"953125641"}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/exams]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mExam Load (0.1ms)[0m   [0mSELECT * FROM `exams` WHERE (`exams`.`id` = 953125641) [0m
+
+
+Processing ExamsController#status (for 0.0.0.0 at 2009-09-17 15:50:22) [GET]
+  Parameters: {"status"=>"not", "id"=>"953125641"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;35;1mSubjectLesson Load (0.2ms)[0m   [0mSELECT `subject_lessons`.* FROM `subject_lessons` INNER JOIN `subjects` ON `subjects`.id = `subject_lessons`.subject_id WHERE (day = 5 AND subjects.user_id=745185059) GROUP BY subject_id[0m
+  [4;36;1mExam Load (0.1ms)[0m   [0;1mSELECT * FROM `exams` WHERE (`exams`.`id` = '953125641') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Rendering exams/status
+Rendered overview/_update_subjects (0.7ms)
+Completed in 4ms (View: 1, DB: 1) | 200 OK [http://test.host/exams/953125641/status?status=not]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;36;1mExam Load (0.1ms)[0m   [0;1mSELECT * FROM `exams` WHERE (`exams`.`id` = 953125641) [0m
+
+
+Processing ExamsController#status (for 0.0.0.0 at 2009-09-17 15:50:22) [GET]
+  Parameters: {"status"=>"done", "id"=>"953125641"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;36;1mSubjectLesson Load (0.2ms)[0m   [0;1mSELECT `subject_lessons`.* FROM `subject_lessons` INNER JOIN `subjects` ON `subjects`.id = `subject_lessons`.subject_id WHERE (day = 5 AND subjects.user_id=745185059) GROUP BY subject_id[0m
+  [4;35;1mExam Load (0.2ms)[0m   [0mSELECT * FROM `exams` WHERE (`exams`.`id` = '953125641') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mExam Update (0.2ms)[0m   [0mUPDATE `exams` SET `length_done` = 30 WHERE `id` = 953125641[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Rendering exams/status
+Rendered overview/_update_subjects (0.0ms)
+Completed in 3ms (View: 0, DB: 1) | 200 OK [http://test.host/exams/953125641/status?status=done]
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+
+
+Processing ExamsController#new (for 0.0.0.0 at 2009-09-17 15:50:22) [GET]
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+Rendering exams/new
+  [4;35;1mSubject Load (0.4ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.user_id = 745185059) [0m
+Rendered exams/_form (2.9ms)
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/exams/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mExam Load (0.2ms)[0m   [0mSELECT * FROM `exams` WHERE (`exams`.`id` = 953125641) [0m
+
+
+Processing ExamsController#show (for 0.0.0.0 at 2009-09-17 15:50:22) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;35;1mExam Load (0.1ms)[0m   [0mSELECT * FROM `exams` WHERE (`exams`.`id` = 953125641) [0m
+Rendering template within layouts/main
+Rendering exams/show
+Rendered layouts/_google_analytics (0.1ms)
+Completed in 3ms (View: 2, DB: 1) | 200 OK [http://test.host/exams/953125641]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mExam Load (0.1ms)[0m   [0mSELECT * FROM `exams` WHERE (`exams`.`id` = 953125641) [0m
+
+
+Processing ExamsController#update (for 0.0.0.0 at 2009-09-17 15:50:22) [PUT]
+  Parameters: {"exam"=>{}, "id"=>"953125641"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;35;1mExam Load (0.1ms)[0m   [0mSELECT * FROM `exams` WHERE (`exams`.`id` = 953125641) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/exams
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/exams/953125641?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `homeworks` [0m
+
+
+Processing HomeworksController#create (for 0.0.0.0 at 2009-09-17 15:50:22) [POST]
+  Parameters: {"homework"=>{"when"=>"5.8.2009"}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mHomework Create (0.2ms)[0m   [0;1mINSERT INTO `homeworks` (`notes`, `length_done`, `length`, `subject_id`, `when`) VALUES(NULL, 0, NULL, NULL, '2009-08-05')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/homeworks
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/homeworks?homework%5Bwhen%5D=5.8.2009]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `homeworks` [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `homeworks` [0m
+  [4;35;1mSubject Load (0.2ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 619423396) [0m
+
+
+Processing HomeworksController#create (for 0.0.0.0 at 2009-09-17 15:50:22) [POST]
+  Parameters: {"homework"=>{"subject_id"=>619423396, "when"=>"4.7.2009"}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mHomework Create (0.1ms)[0m   [0;1mINSERT INTO `homeworks` (`notes`, `length_done`, `length`, `subject_id`, `when`) VALUES(NULL, 0, NULL, 619423396, '2009-07-04')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Rendering homeworks/create
+  [4;36;1mSubject Load (0.2ms)[0m   [0;1mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 619423396) [0m
+Rendered homeworks/_homework (1.8ms)
+Completed in 6ms (View: 3, DB: 2) | 200 OK [http://test.host/homeworks?homework%5Bsubject_id%5D=619423396&homework%5Bwhen%5D=4.7.2009]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `homeworks` [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `homeworks` [0m
+  [4;36;1mHomework Load (0.1ms)[0m   [0;1mSELECT * FROM `homeworks` WHERE (`homeworks`.`id` = 953125641) [0m
+
+
+Processing HomeworksController#destroy (for 0.0.0.0 at 2009-09-17 15:50:22) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;36;1mHomework Load (0.1ms)[0m   [0;1mSELECT * FROM `homeworks` WHERE (`homeworks`.`id` = 953125641) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mHomework Destroy (0.1ms)[0m   [0;1mDELETE FROM `homeworks` WHERE `id` = 953125641[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/homeworks
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/homeworks/953125641/destroy]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `homeworks` [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;36;1mHomework Load (0.1ms)[0m   [0;1mSELECT * FROM `homeworks` WHERE (`homeworks`.`id` = 953125641) [0m
+
+
+Processing HomeworksController#edit (for 0.0.0.0 at 2009-09-17 15:50:22) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;36;1mHomework Load (0.1ms)[0m   [0;1mSELECT * FROM `homeworks` WHERE (`homeworks`.`id` = 953125641) [0m
+Rendering template within layouts/main
+Rendering homeworks/edit
+  [4;35;1mSubject Load (0.3ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.user_id = 745185059) [0m
+Rendered homeworks/_form (4.1ms)
+Rendered layouts/_google_analytics (0.1ms)
+Completed in 7ms (View: 6, DB: 1) | 200 OK [http://test.host/homeworks/953125641/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+
+
+Processing HomeworksController#index (for 0.0.0.0 at 2009-09-17 15:50:22) [GET]
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;36;1mHomework Load (0.2ms)[0m   [0;1mSELECT `homeworks`.* FROM `homeworks` INNER JOIN `subjects` ON `subjects`.id = `homeworks`.subject_id WHERE (subjects.user_id = 745185059 and homeworks.when >= '2009-09-17') [0m
+Rendering template within layouts/main
+Rendering homeworks/index
+Rendered homeworks/_homeworks (0.5ms)
+Rendered layouts/_google_analytics (0.1ms)
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/homeworks]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+
+
+Processing HomeworksController#new (for 0.0.0.0 at 2009-09-17 15:50:22) [GET]
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering homeworks/new
+  [4;35;1mSubject Load (0.2ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.user_id = 745185059) [0m
+Rendered homeworks/_form (1.7ms)
+Rendered layouts/_google_analytics (0.0ms)
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/homeworks/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+
+
+Processing HomeworksController#create (for 0.0.0.0 at 2009-09-17 15:50:22) [POST]
+  Parameters: {"homework"=>{}}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering template within layouts/main
+Rendering homeworks/new
+  [4;36;1mSubject Load (0.2ms)[0m   [0;1mSELECT * FROM `subjects` WHERE (`subjects`.user_id = 745185059) [0m
+Rendered homeworks/_form (1.6ms)
+Rendered layouts/_google_analytics (0.0ms)
+Completed in 5ms (View: 3, DB: 1) | 200 OK [http://test.host/homeworks?]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mHomework Load (0.2ms)[0m   [0mSELECT * FROM `homeworks` WHERE (`homeworks`.`id` = 953125641) [0m
+
+
+Processing HomeworksController#index (for 0.0.0.0 at 2009-09-17 15:50:22) [GET]
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/homeworks]
+
+
+Processing HomeworksController#new (for 0.0.0.0 at 2009-09-17 15:50:22) [GET]
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/homeworks]
+
+
+Processing HomeworksController#create (for 0.0.0.0 at 2009-09-17 15:50:22) [POST]
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/homeworks]
+
+
+Processing HomeworksController#show (for 0.0.0.0 at 2009-09-17 15:50:22) [GET]
+  Parameters: {"id"=>"953125641"}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/homeworks]
+
+
+Processing HomeworksController#edit (for 0.0.0.0 at 2009-09-17 15:50:22) [GET]
+  Parameters: {"id"=>"953125641"}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/homeworks]
+
+
+Processing HomeworksController#update (for 0.0.0.0 at 2009-09-17 15:50:22) [PUT]
+  Parameters: {"id"=>"953125641"}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/homeworks]
+
+
+Processing HomeworksController#destroy (for 0.0.0.0 at 2009-09-17 15:50:22) [DELETE]
+  Parameters: {"id"=>"953125641"}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/homeworks]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mHomework Load (0.1ms)[0m   [0mSELECT * FROM `homeworks` WHERE (`homeworks`.`id` = 953125641) [0m
+
+
+Processing HomeworksController#status (for 0.0.0.0 at 2009-09-17 15:50:22) [GET]
+  Parameters: {"status"=>"not", "id"=>"953125641"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;35;1mSubjectLesson Load (0.2ms)[0m   [0mSELECT `subject_lessons`.* FROM `subject_lessons` INNER JOIN `subjects` ON `subjects`.id = `subject_lessons`.subject_id WHERE (day = 5 AND subjects.user_id=745185059) GROUP BY subject_id[0m
+  [4;36;1mHomework Load (0.1ms)[0m   [0;1mSELECT * FROM `homeworks` WHERE (`homeworks`.`id` = '953125641') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Rendering homeworks/status
+Rendered overview/_update_subjects (0.0ms)
+Completed in 3ms (View: 1, DB: 1) | 200 OK [http://test.host/homeworks/953125641/status?status=not]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;36;1mHomework Load (0.1ms)[0m   [0;1mSELECT * FROM `homeworks` WHERE (`homeworks`.`id` = 953125641) [0m
+
+
+Processing HomeworksController#status (for 0.0.0.0 at 2009-09-17 15:50:22) [GET]
+  Parameters: {"status"=>"done", "id"=>"953125641"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;36;1mSubjectLesson Load (0.2ms)[0m   [0;1mSELECT `subject_lessons`.* FROM `subject_lessons` INNER JOIN `subjects` ON `subjects`.id = `subject_lessons`.subject_id WHERE (day = 5 AND subjects.user_id=745185059) GROUP BY subject_id[0m
+  [4;35;1mHomework Load (0.1ms)[0m   [0mSELECT * FROM `homeworks` WHERE (`homeworks`.`id` = '953125641') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mHomework Update (0.1ms)[0m   [0mUPDATE `homeworks` SET `length_done` = 30 WHERE `id` = 953125641[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Rendering homeworks/status
+Rendered overview/_update_subjects (0.0ms)
+Completed in 3ms (View: 0, DB: 1) | 200 OK [http://test.host/homeworks/953125641/status?status=done]
+  [4;35;1mSQL (0.6ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+
+
+Processing HomeworksController#new (for 0.0.0.0 at 2009-09-17 15:50:22) [GET]
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+Rendering homeworks/new
+  [4;35;1mSubject Load (0.2ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.user_id = 745185059) [0m
+Rendered homeworks/_form (1.8ms)
+Completed in 3ms (View: 2, DB: 1) | 200 OK [http://test.host/homeworks/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mHomework Load (0.1ms)[0m   [0mSELECT * FROM `homeworks` WHERE (`homeworks`.`id` = 953125641) [0m
+
+
+Processing HomeworksController#show (for 0.0.0.0 at 2009-09-17 15:50:22) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;35;1mHomework Load (0.1ms)[0m   [0mSELECT * FROM `homeworks` WHERE (`homeworks`.`id` = 953125641) [0m
+Rendering template within layouts/main
+Rendering homeworks/show
+Rendered layouts/_google_analytics (0.1ms)
+Completed in 3ms (View: 2, DB: 1) | 200 OK [http://test.host/homeworks/953125641]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mHomework Load (0.1ms)[0m   [0mSELECT * FROM `homeworks` WHERE (`homeworks`.`id` = 953125641) [0m
+
+
+Processing HomeworksController#update (for 0.0.0.0 at 2009-09-17 15:50:22) [PUT]
+  Parameters: {"id"=>"953125641", "homework"=>{}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;35;1mHomework Load (0.1ms)[0m   [0mSELECT * FROM `homeworks` WHERE (`homeworks`.`id` = 953125641) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/homeworks
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/homeworks/953125641?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `notes` [0m
+
+
+Processing NotesController#create (for 0.0.0.0 at 2009-09-17 15:50:22) [POST]
+  Parameters: {"note"=>{}}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mNote Create (0.1ms)[0m   [0;1mINSERT INTO `notes` (`updated_at`, `weight`, `description`, `subject_id`, `note`, `created_at`) VALUES('2009-09-17 13:50:22', NULL, NULL, NULL, NULL, '2009-09-17 13:50:22')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/notes
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/notes?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `notes` [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `notes` [0m
+  [4;35;1mNote Load (0.1ms)[0m   [0mSELECT * FROM `notes` WHERE (`notes`.`id` = 953125641) [0m
+
+
+Processing NotesController#destroy (for 0.0.0.0 at 2009-09-17 15:50:22) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;35;1mNote Load (0.1ms)[0m   [0mSELECT * FROM `notes` WHERE (`notes`.`id` = 953125641) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mNote Destroy (0.1ms)[0m   [0mDELETE FROM `notes` WHERE `id` = 953125641[0m
+  [4;36;1mSubject Load (0.2ms)[0m   [0;1mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 619423396) [0m
+  [4;35;1mNote Load (0.1ms)[0m   [0mSELECT * FROM `notes` WHERE (`notes`.subject_id = 619423396) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT sum(`notes`.note) AS sum_note FROM `notes` WHERE (`notes`.subject_id = 619423396) [0m
+  [4;35;1mSubject Update (0.2ms)[0m   [0mUPDATE `subjects` SET `average` = 1.5, `updated_at` = '2009-09-17 13:50:22' WHERE `id` = 619423396[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/notes
+Completed in 4ms (DB: 2) | 302 Found [http://test.host/notes/953125641]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `notes` [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mNote Load (0.1ms)[0m   [0mSELECT * FROM `notes` WHERE (`notes`.`id` = 953125641) [0m
+
+
+Processing NotesController#edit (for 0.0.0.0 at 2009-09-17 15:50:22) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;35;1mNote Load (0.1ms)[0m   [0mSELECT * FROM `notes` WHERE (`notes`.`id` = 953125641) [0m
+Rendering template within layouts/main
+Rendering notes/edit
+  [4;36;1mSubject Load (0.4ms)[0m   [0;1mSELECT * FROM `subjects` WHERE (`subjects`.user_id = 745185059) [0m
+Rendered notes/_form (2.6ms)
+Rendered layouts/_google_analytics (0.1ms)
+Completed in 6ms (View: 4, DB: 2) | 200 OK [http://test.host/notes/953125641/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+
+
+Processing NotesController#index (for 0.0.0.0 at 2009-09-17 15:50:22) [GET]
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;35;1mNote Load (0.2ms)[0m   [0mSELECT `notes`.* FROM `notes` INNER JOIN `subjects` ON `subjects`.id = `notes`.subject_id WHERE (subjects.user_id = 745185059) [0m
+  [4;36;1mSubject Load (0.2ms)[0m   [0;1mSELECT * FROM `subjects` WHERE (`subjects`.user_id = 745185059) [0m
+  [4;35;1mSubject Load (0.2ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 619423396) [0m
+  [4;36;1mSubject Load (0.1ms)[0m   [0;1mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 619423396) [0m
+Rendering template within layouts/main
+Rendering notes/index
+Rendered notes/_subject (2.7ms)
+Rendered notes/_subject (0.8ms)
+Rendered layouts/_google_analytics (0.0ms)
+Completed in 9ms (View: 6, DB: 1) | 200 OK [http://test.host/notes]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+
+
+Processing NotesController#new (for 0.0.0.0 at 2009-09-17 15:50:22) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering notes/new
+  [4;35;1mSubject Load (0.2ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.user_id = 745185059) [0m
+Rendered notes/_form (1.7ms)
+Rendered layouts/_google_analytics (0.0ms)
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/notes/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mNote Load (0.2ms)[0m   [0mSELECT * FROM `notes` WHERE (`notes`.`id` = 953125641) [0m
+
+
+Processing NotesController#show (for 0.0.0.0 at 2009-09-17 15:50:22) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;35;1mNote Load (0.1ms)[0m   [0mSELECT * FROM `notes` WHERE (`notes`.`id` = 953125641) [0m
+Rendering template within layouts/main
+Rendering notes/show
+Rendered layouts/_google_analytics (0.0ms)
+Completed in 3ms (View: 2, DB: 1) | 200 OK [http://test.host/notes/953125641]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mNote Load (0.1ms)[0m   [0mSELECT * FROM `notes` WHERE (`notes`.`id` = 953125641) [0m
+
+
+Processing NotesController#update (for 0.0.0.0 at 2009-09-17 15:50:22) [PUT]
+  Parameters: {"id"=>"953125641", "note"=>{}}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;35;1mNote Load (0.1ms)[0m   [0mSELECT * FROM `notes` WHERE (`notes`.`id` = 953125641) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSubject Load (0.2ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 619423396) [0m
+  [4;36;1mNote Load (0.1ms)[0m   [0;1mSELECT * FROM `notes` WHERE (`notes`.subject_id = 619423396) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT sum(`notes`.note) AS sum_note FROM `notes` WHERE (`notes`.subject_id = 619423396) [0m
+  [4;36;1mSubject Update (0.2ms)[0m   [0;1mUPDATE `subjects` SET `average` = 1.25, `updated_at` = '2009-09-17 13:50:22' WHERE `id` = 619423396[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/notes
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/notes/953125641?]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+
+
+Processing OverviewController#index (for 0.0.0.0 at 2009-09-17 15:50:22) [GET]
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;36;1mSubjectLesson Load (0.2ms)[0m   [0;1mSELECT `subject_lessons`.* FROM `subject_lessons` INNER JOIN `subjects` ON `subjects`.id = `subject_lessons`.subject_id WHERE (day = 5 AND subjects.user_id=745185059) GROUP BY subject_id[0m
+  [4;35;1mHomework Load (0.2ms)[0m   [0mSELECT `homeworks`.* FROM `homeworks` INNER JOIN `subjects` ON `subjects`.id = `homeworks`.subject_id WHERE (subjects.user_id = 745185059 and homeworks.when >= '2009-09-17') [0m
+  [4;36;1mExam Load (0.4ms)[0m   [0;1mSELECT `exams`.* FROM `exams` INNER JOIN `subjects` ON `subjects`.id = `exams`.subject_id WHERE (subjects.user_id = 745185059 and exams.when >= '2009-09-17') [0m
+Rendering template within layouts/main
+Rendering overview/index
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT sum(`subjects`.time) AS sum_time FROM `subjects` WHERE (`subjects`.user_id = 745185059) [0m
+Rendered overview/_side (0.5ms)
+Rendered layouts/_google_analytics (0.0ms)
+Completed in 58ms (View: 4, DB: 2) | 200 OK [http://test.host/overview]
+  [4;36;1mSQL (3.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+
+
+Processing OverviewController#index (for 0.0.0.0 at 2009-09-17 15:50:22) [GET]
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;36;1mSubjectLesson Load (0.2ms)[0m   [0;1mSELECT `subject_lessons`.* FROM `subject_lessons` INNER JOIN `subjects` ON `subjects`.id = `subject_lessons`.subject_id WHERE (day = 5 AND subjects.user_id=745185059) GROUP BY subject_id[0m
+  [4;35;1mHomework Load (0.2ms)[0m   [0mSELECT `homeworks`.* FROM `homeworks` INNER JOIN `subjects` ON `subjects`.id = `homeworks`.subject_id WHERE (subjects.user_id = 745185059 and homeworks.when >= '2009-09-17') [0m
+  [4;36;1mExam Load (0.2ms)[0m   [0;1mSELECT `exams`.* FROM `exams` INNER JOIN `subjects` ON `subjects`.id = `exams`.subject_id WHERE (subjects.user_id = 745185059 and exams.when >= '2009-09-17') [0m
+Rendering template within layouts/main
+Rendering overview/index
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT sum(`subjects`.time) AS sum_time FROM `subjects` WHERE (`subjects`.user_id = 745185059) [0m
+Rendered overview/_side (0.1ms)
+Rendered layouts/_google_analytics (0.1ms)
+Completed in 6ms (View: 3, DB: 5) | 200 OK [http://test.host/overview]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mSubject Load (0.2ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 619423396) [0m
+
+
+Processing OverviewController#setComplete (for 0.0.0.0 at 2009-09-17 15:50:22) [GET]
+  Parameters: {"id"=>"619423396"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;35;1mSubject Load (0.2ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.`id` = '619423396') AND (`subjects`.user_id = 745185059) LIMIT 1[0m
+  [4;36;1mLessonPrepare Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `lesson_prepares`[0m
+  [4;35;1mLessonPrepare Load (0.2ms)[0m   [0mSELECT * FROM `lesson_prepares` WHERE (`lesson_prepares`.`date` = '2009-09-17') AND (`lesson_prepares`.subject_id = 619423396) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mLessonPrepare Create (0.1ms)[0m   [0mINSERT INTO `lesson_prepares` (`date`, `length_done`, `subject_id`) VALUES('2009-09-17', 0, 619423396)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSubjectLesson Load (0.2ms)[0m   [0mSELECT `subject_lessons`.* FROM `subject_lessons` INNER JOIN `subjects` ON `subjects`.id = `subject_lessons`.subject_id WHERE (day = 5 AND subjects.user_id=745185059) GROUP BY subject_id[0m
+Rendering overview/setComplete
+Rendered overview/_update_subjects (0.0ms)
+Completed in 9ms (View: 0, DB: 3) | 200 OK [http://test.host/overview/619423396/setComplete]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+
+
+Processing OverviewController#index (for 0.0.0.0 at 2009-09-17 15:50:23) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;35;1mSubjectLesson Load (0.2ms)[0m   [0mSELECT `subject_lessons`.* FROM `subject_lessons` INNER JOIN `subjects` ON `subjects`.id = `subject_lessons`.subject_id WHERE (day = 5 AND subjects.user_id=745185059) GROUP BY subject_id[0m
+  [4;36;1mHomework Load (0.2ms)[0m   [0;1mSELECT `homeworks`.* FROM `homeworks` INNER JOIN `subjects` ON `subjects`.id = `homeworks`.subject_id WHERE (subjects.user_id = 745185059 and homeworks.when >= '2009-09-17') [0m
+  [4;35;1mExam Load (0.2ms)[0m   [0mSELECT `exams`.* FROM `exams` INNER JOIN `subjects` ON `subjects`.id = `exams`.subject_id WHERE (subjects.user_id = 745185059 and exams.when >= '2009-09-17') [0m
+Rendering template within layouts/main
+Rendering overview/index
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT sum(`subjects`.time) AS sum_time FROM `subjects` WHERE (`subjects`.user_id = 745185059) [0m
+Rendered overview/_side (0.1ms)
+Rendered layouts/_google_analytics (0.1ms)
+Completed in 5ms (View: 3, DB: 2) | 200 OK [http://test.host/overview]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT sum(`subjects`.time) AS sum_time FROM `subjects` WHERE (`subjects`.user_id = 745185059) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+
+
+Processing OverviewController#index (for 0.0.0.0 at 2009-09-17 15:50:23) [GET]
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;36;1mSubjectLesson Load (0.2ms)[0m   [0;1mSELECT `subject_lessons`.* FROM `subject_lessons` INNER JOIN `subjects` ON `subjects`.id = `subject_lessons`.subject_id WHERE (day = 5 AND subjects.user_id=745185059) GROUP BY subject_id[0m
+  [4;35;1mHomework Load (0.2ms)[0m   [0mSELECT `homeworks`.* FROM `homeworks` INNER JOIN `subjects` ON `subjects`.id = `homeworks`.subject_id WHERE (subjects.user_id = 745185059 and homeworks.when >= '2009-09-17') [0m
+  [4;36;1mExam Load (0.2ms)[0m   [0;1mSELECT `exams`.* FROM `exams` INNER JOIN `subjects` ON `subjects`.id = `exams`.subject_id WHERE (subjects.user_id = 745185059 and exams.when >= '2009-09-17') [0m
+Rendering template within layouts/main
+Rendering overview/index
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT sum(`subjects`.time) AS sum_time FROM `subjects` WHERE (`subjects`.user_id = 745185059) [0m
+Rendered overview/_side (0.1ms)
+Rendered layouts/_google_analytics (0.0ms)
+Completed in 5ms (View: 2, DB: 1) | 200 OK [http://test.host/overview]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `remember_token_expires_at` = '2009-10-01 13:50:23', `remember_token` = '37fc31a9827ddb9bf4fc17eef9e54feaef5e3277', `updated_at` = '2009-09-17 13:50:23' WHERE `id` = 745185059[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `remember_token_expires_at` = '2009-10-01 13:50:23', `remember_token` = '37fc31a9827ddb9bf4fc17eef9e54feaef5e3277', `updated_at` = '2009-09-17 13:50:23' WHERE `id` = 745185059[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mUser Update (0.1ms)[0m   [0;1mUPDATE `users` SET `remember_token_expires_at` = '2009-09-17 13:45:23', `updated_at` = '2009-09-17 13:50:23' WHERE `id` = 745185059[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mUser Update (0.1ms)[0m   [0;1mUPDATE `users` SET `remember_token_expires_at` = '2009-10-01 13:50:23', `remember_token` = '37fc31a9827ddb9bf4fc17eef9e54feaef5e3277', `updated_at` = '2009-09-17 13:50:23' WHERE `id` = 745185059[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `subject_lessons` [0m
+
+
+Processing SubjectLessonsController#create (for 0.0.0.0 at 2009-09-17 15:50:23) [POST]
+  Parameters: {"subject_lesson"=>{}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSubjectLesson Create (0.2ms)[0m   [0mINSERT INTO `subject_lessons` (`updated_at`, `lesson`, `day`, `subject_id`, `created_at`) VALUES('2009-09-17 13:50:23', NULL, NULL, NULL, '2009-09-17 13:50:23')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/subject_lessons/996332878
+Completed in 4ms (DB: 5) | 302 Found [http://test.host/subject_lessons?]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `subject_lessons` [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `subject_lessons` [0m
+  [4;35;1mSubjectLesson Load (0.1ms)[0m   [0mSELECT * FROM `subject_lessons` WHERE (`subject_lessons`.`id` = 953125641) [0m
+
+
+Processing SubjectLessonsController#destroy (for 0.0.0.0 at 2009-09-17 15:50:23) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mSubjectLesson Load (0.1ms)[0m   [0;1mSELECT * FROM `subject_lessons` WHERE (`subject_lessons`.`id` = 953125641) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSubjectLesson Destroy (0.1ms)[0m   [0;1mDELETE FROM `subject_lessons` WHERE `id` = 953125641[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/subject_lessons
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/subject_lessons/953125641]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `subject_lessons` [0m
+  [4;35;1mSQL (0.6ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSubjectLesson Load (0.2ms)[0m   [0mSELECT * FROM `subject_lessons` WHERE (`subject_lessons`.`id` = 953125641) [0m
+
+
+Processing SubjectLessonsController#edit (for 0.0.0.0 at 2009-09-17 15:50:23) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mSubjectLesson Load (0.1ms)[0m   [0;1mSELECT * FROM `subject_lessons` WHERE (`subject_lessons`.`id` = 953125641) [0m
+Rendering template within layouts/main
+Rendering subject_lessons/edit
+Rendered layouts/_google_analytics (0.0ms)
+Completed in 3ms (View: 3, DB: 1) | 200 OK [http://test.host/subject_lessons/953125641/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing SubjectLessonsController#index (for 0.0.0.0 at 2009-09-17 15:50:23) [GET]
+  [4;35;1mSubjectLesson Load (0.1ms)[0m   [0mSELECT * FROM `subject_lessons` [0m
+Rendering template within layouts/main
+Rendering subject_lessons/index
+Rendered layouts/_google_analytics (0.0ms)
+Completed in 3ms (View: 3, DB: 0) | 200 OK [http://test.host/subject_lessons]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing SubjectLessonsController#new (for 0.0.0.0 at 2009-09-17 15:50:23) [GET]
+Rendering template within layouts/main
+Rendering subject_lessons/new
+Rendered layouts/_google_analytics (0.0ms)
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://test.host/subject_lessons/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSubjectLesson Load (0.2ms)[0m   [0;1mSELECT * FROM `subject_lessons` WHERE (`subject_lessons`.`id` = 953125641) [0m
+
+
+Processing SubjectLessonsController#show (for 0.0.0.0 at 2009-09-17 15:50:23) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mSubjectLesson Load (0.1ms)[0m   [0mSELECT * FROM `subject_lessons` WHERE (`subject_lessons`.`id` = 953125641) [0m
+Rendering template within layouts/main
+Rendering subject_lessons/show
+Rendered layouts/_google_analytics (0.0ms)
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://test.host/subject_lessons/953125641]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSubjectLesson Load (0.1ms)[0m   [0;1mSELECT * FROM `subject_lessons` WHERE (`subject_lessons`.`id` = 953125641) [0m
+
+
+Processing SubjectLessonsController#update (for 0.0.0.0 at 2009-09-17 15:50:23) [PUT]
+  Parameters: {"subject_lesson"=>{}, "id"=>"953125641"}
+  [4;35;1mSubjectLesson Load (0.1ms)[0m   [0mSELECT * FROM `subject_lessons` WHERE (`subject_lessons`.`id` = 953125641) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/subject_lessons/953125641
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/subject_lessons/953125641?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mSubject Load (0.2ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 619423396) [0m
+
+
+Processing SubjectsController#destroy to js (for 0.0.0.0 at 2009-09-17 15:50:23) [DELETE]
+  Parameters: {"id"=>"619423396"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;35;1mSubject Load (0.2ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 619423396) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSubject Destroy (0.1ms)[0m   [0mDELETE FROM `subjects` WHERE `id` = 619423396[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Rendering subjects/destroy
+Completed in 3ms (View: 0, DB: 1) | 200 OK [http://test.host/subjects/destroy/619423396.js]
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `subjects` [0m
+
+
+Processing SubjectsController#create (for 0.0.0.0 at 2009-09-17 15:50:23) [POST]
+  Parameters: {"subject"=>{"title"=>"Anglictina"}}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSubject Create (0.2ms)[0m   [0mINSERT INTO `subjects` (`updated_at`, `title`, `time`, `priority`, `type`, `color`, `average`, `user_id`, `created_at`) VALUES('2009-09-17 13:50:23', 'Anglictina', NULL, NULL, NULL, NULL, NULL, 745185059, '2009-09-17 13:50:23')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/subjects
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/subjects?subject%5Btitle%5D=Anglictina]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `subjects` [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `subjects` [0m
+  [4;36;1mSubject Load (0.1ms)[0m   [0;1mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 925307922) [0m
+
+
+Processing SubjectsController#destroy (for 0.0.0.0 at 2009-09-17 15:50:23) [DELETE]
+  Parameters: {"id"=>"925307922"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;36;1mSubject Load (0.1ms)[0m   [0;1mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 925307922) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSubject Destroy (0.3ms)[0m   [0;1mDELETE FROM `subjects` WHERE `id` = 925307922[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/subjects/settings
+Completed in 2ms (DB: 2) | 302 Found [http://test.host/subjects/destroy/925307922]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `subjects` [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;36;1mSubject Load (0.1ms)[0m   [0;1mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 619423396) [0m
+
+
+Processing SubjectsController#edit (for 0.0.0.0 at 2009-09-17 15:50:23) [GET]
+  Parameters: {"id"=>"619423396"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;36;1mSubject Load (0.1ms)[0m   [0;1mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 619423396) [0m
+Rendering template within layouts/main
+Rendering subjects/edit
+Rendered layouts/_google_analytics (0.0ms)
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/subjects/619423396/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+
+
+Processing SubjectsController#index (for 0.0.0.0 at 2009-09-17 15:50:23) [GET]
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;35;1mSubject Load (0.2ms)[0m   [0mSELECT * FROM `subjects` WHERE (user_id = 745185059) [0m
+  [4;36;1mSubjectLesson Load (0.2ms)[0m   [0;1mSELECT `subject_lessons`.* FROM `subject_lessons` INNER JOIN `subjects` ON `subjects`.id = `subject_lessons`.subject_id WHERE (subjects.user_id = 745185059) [0m
+Rendering template within layouts/main
+Rendering subjects/index
+Rendered layouts/_google_analytics (0.1ms)
+Completed in 8ms (View: 7, DB: 1) | 200 OK [http://test.host/subjects]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+
+
+Processing SubjectsController#new (for 0.0.0.0 at 2009-09-17 15:50:23) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+Rendering template within layouts/main
+Rendering subjects/new
+Rendered layouts/_google_analytics (0.0ms)
+Completed in 3ms (View: 3, DB: 0) | 200 OK [http://test.host/subjects/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;36;1mSubject Load (0.1ms)[0m   [0;1mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 619423396) [0m
+
+
+Processing SubjectsController#update (for 0.0.0.0 at 2009-09-17 15:50:23) [PUT]
+  Parameters: {"id"=>"619423396", "subject"=>{}}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) LIMIT 1[0m
+  [4;36;1mSubject Load (0.1ms)[0m   [0;1mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 619423396) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/subjects
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/subjects/619423396?]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (login = 'aaron' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 317248456) [0m
+
+
+Processing UsersController#activate (for 0.0.0.0 at 2009-09-17 15:50:23) [GET]
+  Parameters: {"activation_code"=>"8f24789ae988411ccf33ab0c30fe9106fab32e9a"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`activation_code` = '8f24789ae988411ccf33ab0c30fe9106fab32e9a') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `activated_at` = '2009-09-17 13:50:23', `activation_code` = NULL, `updated_at` = '2009-09-17 13:50:23' WHERE `id` = 317248456[0m
+Sent mail to aaron@example.com
+
+Date: Thu, 17 Sep 2009 15:50:23 +0200
+From: oracle@edukit.sk
+To: aaron@example.com
+Subject: =?utf-8?Q?Edukit=3A_Tvoje_konto_bolo_aktivovan=C3=A9=21?=
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+aaron, tvoje konto bolo aktivované. Môžeš začať využívať Edukit.
+
+  http://www.edukit.sk/
+  [4;36;1mSQL (1.4ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed in 22ms (DB: 2) | 302 Found [http://test.host/aktivacia/8f24789ae988411ccf33ab0c30fe9106fab32e9a]
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (login = 'aaron' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2009-09-17 15:50:23) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"quire", "password"=>"quire", "login"=>"quire", "email"=>"quire@example.com"}}
+  [4;35;1mSQL (0.3ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'quire@example.com') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`salt`, `updated_at`, `activated_at`, `crypted_password`, `openid_url`, `remember_token_expires_at`, `activation_code`, `remember_token`, `login`, `email`, `created_at`) VALUES('ab503e153fd5380bc426a859a82939d454c81222', '2009-09-17 13:50:23', NULL, '51f1f80b3a523a167fc40f79535a07f148ce4c11', NULL, NULL, '042cd1437d1dd2951682e26f8cebf9eb525c1814', NULL, 'quire', 'quire@example.com', '2009-09-17 13:50:23')[0m
+Sent mail to quire@example.com
+
+Date: Thu, 17 Sep 2009 15:50:23 +0200
+From: oracle@edukit.sk
+To: quire@example.com
+Subject: =?utf-8?Q?Edukit=3A_Tvoje_konto_je_vytvoren=C3=A9=2E_Teraz_si_ho_aktivuj=2E?=
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Tvoje konto bolo vytvorené:
+
+  Meno: quire
+  Heslo: quire
+
+Klikni na tento odkaz, aby si si aktivoval svoje konto:
+
+  http://www.edukit.sk/aktivacia/042cd1437d1dd2951682e26f8cebf9eb525c1814
+  [4;35;1mSQL (0.6ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/subjects
+Completed in 145ms (DB: 2) | 302 Found [http://test.host/users?user%5Bemail%5D=quire%40example.com&user%5Blogin%5D=quire&user%5Bpassword%5D=quire&user%5Bpassword_confirmation%5D=quire]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing UsersController#activate (for 0.0.0.0 at 2009-09-17 15:50:23) [GET]
+  Parameters: {"activation_code"=>""}
+Redirected to http://test.host/
+Completed in 0ms (DB: 1) | 302 Found [http://test.host/aktivacia/]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing UsersController#activate (for 0.0.0.0 at 2009-09-17 15:50:23) [GET]
+Redirected to http://test.host/
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/users/activate]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2009-09-17 15:50:23) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"quire", "password"=>"quire", "login"=>"quire", "email"=>nil}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering template within layouts/main
+Rendering users/new
+Rendered users/_registration (2.6ms)
+Rendered layouts/_google_analytics (0.1ms)
+Completed in 8ms (View: 5, DB: 1) | 200 OK [http://test.host/users?user%5Bemail%5D=&user%5Blogin%5D=quire&user%5Bpassword%5D=quire&user%5Bpassword_confirmation%5D=quire]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2009-09-17 15:50:23) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"quire", "password"=>"quire", "login"=>nil, "email"=>"quire@example.com"}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`login` IS NULL) LIMIT 1[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering template within layouts/main
+Rendering users/new
+Rendered users/_registration (1.3ms)
+Rendered layouts/_google_analytics (0.1ms)
+Completed in 6ms (View: 3, DB: 1) | 200 OK [http://test.host/users?user%5Bemail%5D=quire%40example.com&user%5Blogin%5D=&user%5Bpassword%5D=quire&user%5Bpassword_confirmation%5D=quire]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2009-09-17 15:50:23) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>nil, "password"=>"quire", "login"=>"quire", "email"=>"quire@example.com"}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering template within layouts/main
+Rendering users/new
+Rendered users/_registration (1.2ms)
+Rendered layouts/_google_analytics (0.1ms)
+Completed in 5ms (View: 3, DB: 1) | 200 OK [http://test.host/users?user%5Bemail%5D=quire%40example.com&user%5Blogin%5D=quire&user%5Bpassword%5D=quire&user%5Bpassword_confirmation%5D=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2009-09-17 15:50:23) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"quire", "password"=>nil, "login"=>"quire", "email"=>"quire@example.com"}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering template within layouts/main
+Rendering users/new
+Rendered users/_registration (1.2ms)
+Rendered layouts/_google_analytics (0.0ms)
+Completed in 5ms (View: 3, DB: 1) | 200 OK [http://test.host/users?user%5Bemail%5D=quire%40example.com&user%5Blogin%5D=quire&user%5Bpassword%5D=&user%5Bpassword_confirmation%5D=quire]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2009-09-17 15:50:23) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"quire", "password"=>"quire", "login"=>"quire", "email"=>"quire@example.com"}}
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'quire@example.com') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`salt`, `updated_at`, `activated_at`, `crypted_password`, `openid_url`, `remember_token_expires_at`, `activation_code`, `remember_token`, `login`, `email`, `created_at`) VALUES('ab503e153fd5380bc426a859a82939d454c81222', '2009-09-17 13:50:23', NULL, '51f1f80b3a523a167fc40f79535a07f148ce4c11', NULL, NULL, '6ef0b462522125ba82349d3aeb92376346802d1f', NULL, 'quire', 'quire@example.com', '2009-09-17 13:50:23')[0m
+Sent mail to quire@example.com
+
+Date: Thu, 17 Sep 2009 15:50:23 +0200
+From: oracle@edukit.sk
+To: quire@example.com
+Subject: =?utf-8?Q?Edukit=3A_Tvoje_konto_je_vytvoren=C3=A9=2E_Teraz_si_ho_aktivuj=2E?=
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Tvoje konto bolo vytvorené:
+
+  Meno: quire
+  Heslo: quire
+
+Klikni na tento odkaz, aby si si aktivoval svoje konto:
+
+  http://www.edukit.sk/aktivacia/6ef0b462522125ba82349d3aeb92376346802d1f
+  [4;35;1mSQL (1.4ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/subjects
+Completed in 20ms (DB: 2) | 302 Found [http://test.host/users?user%5Bemail%5D=quire%40example.com&user%5Blogin%5D=quire&user%5Bpassword%5D=quire&user%5Bpassword_confirmation%5D=quire]
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185061) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mExam Load (0.2ms)[0m   [0;1mSELECT * FROM `exams` WHERE (`exams`.`id` = 953125641) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mExam Update (0.1ms)[0m   [0;1mUPDATE `exams` SET `length_done` = 30 WHERE `id` = 953125641[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mHomework Create (0.1ms)[0m   [0mINSERT INTO `homeworks` (`notes`, `length_done`, `length`, `subject_id`, `when`) VALUES(NULL, 0, 40, NULL, '2009-09-17')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mHomework Load (0.2ms)[0m   [0mSELECT * FROM `homeworks` WHERE (`homeworks`.`id` = 953125641) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mHomework Update (0.1ms)[0m   [0mUPDATE `homeworks` SET `length_done` = 30 WHERE `id` = 953125641[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSubject Create (0.1ms)[0m   [0;1mINSERT INTO `subjects` (`updated_at`, `title`, `time`, `priority`, `type`, `color`, `average`, `user_id`, `created_at`) VALUES('2009-09-17 13:51:04', 'Just a subject!', NULL, NULL, NULL, NULL, NULL, NULL, '2009-09-17 13:51:04')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mNote Create (0.1ms)[0m   [0mINSERT INTO `notes` (`updated_at`, `weight`, `description`, `subject_id`, `note`, `created_at`) VALUES('2009-09-17 13:51:04', NULL, NULL, 925307923, 1.0, '2009-09-17 13:51:04')[0m
+  [4;36;1mSubject Load (0.2ms)[0m   [0;1mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 925307923) [0m
+  [4;35;1mNote Load (0.1ms)[0m   [0mSELECT * FROM `notes` WHERE (`notes`.subject_id = 925307923) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT sum(`notes`.note) AS sum_note FROM `notes` WHERE (`notes`.subject_id = 925307923) [0m
+  [4;35;1mSubject Update (0.1ms)[0m   [0mUPDATE `subjects` SET `average` = 1.0, `updated_at` = '2009-09-17 13:51:04' WHERE `id` = 925307923[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mNote Create (0.1ms)[0m   [0;1mINSERT INTO `notes` (`updated_at`, `weight`, `description`, `subject_id`, `note`, `created_at`) VALUES('2009-09-17 13:51:04', NULL, NULL, 925307923, 2.0, '2009-09-17 13:51:04')[0m
+  [4;35;1mSubject Load (0.1ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 925307923) [0m
+  [4;36;1mNote Load (0.1ms)[0m   [0;1mSELECT * FROM `notes` WHERE (`notes`.subject_id = 925307923) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT sum(`notes`.note) AS sum_note FROM `notes` WHERE (`notes`.subject_id = 925307923) [0m
+  [4;36;1mSubject Update (0.1ms)[0m   [0;1mUPDATE `subjects` SET `average` = 1.5, `updated_at` = '2009-09-17 13:51:04' WHERE `id` = 925307923[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mNote Create (0.1ms)[0m   [0mINSERT INTO `notes` (`updated_at`, `weight`, `description`, `subject_id`, `note`, `created_at`) VALUES('2009-09-17 13:51:04', NULL, NULL, 925307923, 2.5, '2009-09-17 13:51:04')[0m
+  [4;36;1mSubject Load (0.2ms)[0m   [0;1mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 925307923) [0m
+  [4;35;1mNote Load (0.1ms)[0m   [0mSELECT * FROM `notes` WHERE (`notes`.subject_id = 925307923) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT sum(`notes`.note) AS sum_note FROM `notes` WHERE (`notes`.subject_id = 925307923) [0m
+  [4;35;1mSubject Update (0.1ms)[0m   [0mUPDATE `subjects` SET `average` = 1.83333333333333, `updated_at` = '2009-09-17 13:51:04' WHERE `id` = 925307923[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mNote Create (0.1ms)[0m   [0;1mINSERT INTO `notes` (`updated_at`, `weight`, `description`, `subject_id`, `note`, `created_at`) VALUES('2009-09-17 13:51:04', NULL, NULL, 925307923, 2.0, '2009-09-17 13:51:04')[0m
+  [4;35;1mSubject Load (0.1ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 925307923) [0m
+  [4;36;1mNote Load (0.1ms)[0m   [0;1mSELECT * FROM `notes` WHERE (`notes`.subject_id = 925307923) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT sum(`notes`.note) AS sum_note FROM `notes` WHERE (`notes`.subject_id = 925307923) [0m
+  [4;36;1mSubject Update (0.1ms)[0m   [0;1mUPDATE `subjects` SET `average` = 1.875, `updated_at` = '2009-09-17 13:51:04' WHERE `id` = 925307923[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mNote Create (0.1ms)[0m   [0mINSERT INTO `notes` (`updated_at`, `weight`, `description`, `subject_id`, `note`, `created_at`) VALUES('2009-09-17 13:51:04', NULL, NULL, 925307923, 3.0, '2009-09-17 13:51:04')[0m
+  [4;36;1mSubject Load (0.1ms)[0m   [0;1mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 925307923) [0m
+  [4;35;1mNote Load (0.1ms)[0m   [0mSELECT * FROM `notes` WHERE (`notes`.subject_id = 925307923) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT sum(`notes`.note) AS sum_note FROM `notes` WHERE (`notes`.subject_id = 925307923) [0m
+  [4;35;1mSubject Update (0.1ms)[0m   [0mUPDATE `subjects` SET `average` = 2.1, `updated_at` = '2009-09-17 13:51:04' WHERE `id` = 925307923[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSubject Load (0.1ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 925307923) [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (login = 'quentin' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'quire@example.com') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`salt`, `updated_at`, `activated_at`, `crypted_password`, `openid_url`, `remember_token_expires_at`, `activation_code`, `remember_token`, `login`, `email`, `created_at`) VALUES('2f80fd16b816a3fa2bdf64b0c59a5bbdf4176ced', '2009-09-17 13:51:04', NULL, 'f6901c54922fe60e66701e98a3789e3d7c8b56a8', NULL, NULL, '937290a251035d9d93197c0d84be141a336c7ee5', NULL, 'quire', 'quire@example.com', '2009-09-17 13:51:04')[0m
+Sent mail to quire@example.com
+
+Date: Thu, 17 Sep 2009 15:51:04 +0200
+From: oracle@edukit.sk
+To: quire@example.com
+Subject: =?utf-8?Q?Edukit=3A_Tvoje_konto_je_vytvoren=C3=A9=2E_Teraz_si_ho_aktivuj=2E?=
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Tvoje konto bolo vytvorené:
+
+  Meno: quire
+  Heslo: quire
+
+Klikni na tento odkaz, aby si si aktivoval svoje konto:
+
+  http://www.edukit.sk/aktivacia/937290a251035d9d93197c0d84be141a336c7ee5
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'quire@example.com') LIMIT 1[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`salt`, `updated_at`, `activated_at`, `crypted_password`, `openid_url`, `remember_token_expires_at`, `activation_code`, `remember_token`, `login`, `email`, `created_at`) VALUES('2f80fd16b816a3fa2bdf64b0c59a5bbdf4176ced', '2009-09-17 13:51:04', NULL, 'f6901c54922fe60e66701e98a3789e3d7c8b56a8', NULL, NULL, '0a286749b54651b92de50ca7e5893cfaae779035', NULL, 'quire', 'quire@example.com', '2009-09-17 13:51:04')[0m
+Sent mail to quire@example.com
+
+Date: Thu, 17 Sep 2009 15:51:04 +0200
+From: oracle@edukit.sk
+To: quire@example.com
+Subject: =?utf-8?Q?Edukit=3A_Tvoje_konto_je_vytvoren=C3=A9=2E_Teraz_si_ho_aktivuj=2E?=
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Tvoje konto bolo vytvorené:
+
+  Meno: quire
+  Heslo: quire
+
+Klikni na tento odkaz, aby si si aktivoval svoje konto:
+
+  http://www.edukit.sk/aktivacia/0a286749b54651b92de50ca7e5893cfaae779035
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185061) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'quentin2' AND `users`.id <> 745185059) LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'quentin@example.com' AND `users`.id <> 745185059) LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `login` = 'quentin2', `updated_at` = '2009-09-17 13:51:04' WHERE `id` = 745185059[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (login = 'quentin2' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mUser Update (0.1ms)[0m   [0;1mUPDATE `users` SET `remember_token_expires_at` = '2009-10-01 13:51:04', `remember_token` = '8974ebe0998ef6beb34150fd77522ab46b3b509e', `updated_at` = '2009-09-17 13:51:04' WHERE `id` = 745185059[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mUser Update (0.1ms)[0m   [0;1mUPDATE `users` SET `remember_token_expires_at` = '2009-09-24 13:51:04', `remember_token` = '36264ec743b04c1241c10bfe8c52a9d44d840f35', `updated_at` = '2009-09-17 13:51:04' WHERE `id` = 745185059[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `remember_token_expires_at` = '2009-09-24 13:51:04', `remember_token` = '36264ec743b04c1241c10bfe8c52a9d44d840f35', `updated_at` = '2009-09-17 13:51:04' WHERE `id` = 745185059[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`login` IS NULL) LIMIT 1[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'quire@example.com') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'quire@example.com') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'quire') LIMIT 1[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'quire@example.com') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'quentin' AND `users`.id <> 745185059) LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'quentin@example.com' AND `users`.id <> 745185059) LIMIT 1[0m
+  [4;36;1mUser Update (0.1ms)[0m   [0;1mUPDATE `users` SET `crypted_password` = '4b6dd603c64f03bc2f676658e287094878df9603', `updated_at` = '2009-09-17 13:51:04' WHERE `id` = 745185059[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (login = 'quentin' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `remember_token_expires_at` = '2009-10-01 13:51:04', `remember_token` = '8974ebe0998ef6beb34150fd77522ab46b3b509e', `updated_at` = '2009-09-17 13:51:04' WHERE `id` = 745185059[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 745185059) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Update (0.1ms)[0m   [0mUPDATE `users` SET `remember_token_expires_at` = '2009-10-01 13:51:04', `remember_token` = '8974ebe0998ef6beb34150fd77522ab46b3b509e', `updated_at` = '2009-09-17 13:51:04' WHERE `id` = 745185059[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mUser Update (0.1ms)[0m   [0;1mUPDATE `users` SET `remember_token_expires_at` = NULL, `remember_token` = NULL, `updated_at` = '2009-09-17 13:51:04' WHERE `id` = 745185059[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK[0m

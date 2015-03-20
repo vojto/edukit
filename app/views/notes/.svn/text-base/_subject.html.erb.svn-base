@@ -1,0 +1,32 @@
+<li class="clearfix" id="subject_<%= subject.id %>">
+		<div class="fl subject_info">
+			<div class="subject <%= subject.color %>">
+				<%= subject %>
+			</div><!-- .subject -->
+			<%= link_to "Pridať známku", new_note_path, :class => "add_note" %>
+		</div><!-- .fl -->
+		<div class="notes clearfix fl">
+			<% notes.each do |note| %>
+			<div class="note fl" id="note_<%= note.id %>">
+				<%= link_to note, edit_note_path(note), :class => 'note' %>
+				<% unless note.description.empty? %>
+				<div class="note_desc">
+					<span><%= note.description %></span>
+				</div><!-- .note_desc -->
+				<% end %>
+			</div><!-- .note -->
+			<% end %>
+			<div class="new_note hidden fl">
+				<% form_tag({:controller => "notes", :action => "create"}, :class => "ajaxified") do %>
+				<%= select_tag "note[note]", options_for_select(NotesHelper::Notes) %>
+				<%= text_field_tag "note[description]" %>
+				<%= hidden_field_tag "note[subject_id]", subject.id %>
+				<%= submit_tag "Pridať" %>
+				<% end %>
+			</div><!-- .new_note fl -->
+			&nbsp;
+		</div><!-- .notes -->
+		<div class="fl average group_<%= subject.average_group %>">
+			<%= number_with_precision subject.average, :precision => 2 %>
+		</div><!-- .average -->
+	</li>

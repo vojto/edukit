@@ -1,0 +1,15 @@
+<% if @homework.errors.empty? %>
+	homework = "<%= escape_javascript(render(:partial => "homework", :object => @homework)) %>";
+	$("div.content form#new_homework").slideUp();
+	if ($("ul.day_<%= @homework.when.to_s %>").length > 0) {
+		$("ul.day_<%= @homework.when.to_s %>").append(homework);
+	}
+	else
+	{
+		$(".content").prepend($("<ul />").addClass("task_list").addClass("day_<%= @homework.when.to_s %>").append(homework));
+		$(".content").prepend($("<div />").addClass("clearfix").append($("<h4 />").addClass("task_list").addClass("day_<%= @homework.when.to_s %>").text("<%= nice_date(@homework.when) %>")));
+	}
+<% else %>
+	$("div.content form#new_homework").replaceWith("<%= escape_javascript(render :partial => "form") %>");
+	$("div.content form#new_homework").addClass("hilighted").addClass("ajaxified");
+<% end %>

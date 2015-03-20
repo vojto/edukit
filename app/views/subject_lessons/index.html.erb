@@ -1,0 +1,22 @@
+<h1>Listing subject_lessons</h1>
+
+<table>
+  <tr>
+    <th>Day</th>
+    <th>Lesson</th>
+  </tr>
+
+<% for subject_lesson in @subject_lessons %>
+  <tr>
+    <td><%=h subject_lesson.day %></td>
+    <td><%=h subject_lesson.lesson %></td>
+    <td><%= link_to 'Show', subject_lesson %></td>
+    <td><%= link_to 'Edit', edit_subject_lesson_path(subject_lesson) %></td>
+    <td><%= link_to 'Destroy', subject_lesson, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New subject_lesson', new_subject_lesson_path %>

@@ -1,0 +1,14 @@
+<li class="subject clearfix done" id="subject_<%= subject.id %>">
+	<div class="bar clearfix <%= subject.color %>">
+		<h4><%= subject.title %></h4><span><%= subject.time_total %>m</span>
+	</div>
+	<div class="info clearfix">
+		<div class="fl">
+			Priemer: 1.00
+		</div><!-- .fl -->
+		<div class="fr">
+			<a href="<%= url_for :controller => 'overview', :action => 'setComplete', :id => subject.id %>" class="bound_dashboard_setComplete">Hotovo?</a>
+			<a class="uni bound_dashboard_revertComplete" href="<%= url_for :controller => 'overview', :action => 'revertComplete', :id => subject.id %>">Vrátiť</a>
+		</div><!-- .fr -->
+	</div><!-- .bar -->
+</li>

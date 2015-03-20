@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Edukit: <%=t "actions.#{controller.controller_name}.#{controller.action_name}", :default => "Študuj efektívne." %></title>
+	<%= stylesheet_link_tag 'scaffold', 'ui.theme.css', 'ui.datepicker.css', 'schoolr' %>
+	<%= javascript_include_tag 'jquery-1.3.1.min.js', 'minified/ui.core.min.js', 'minified/ui.datepicker.min.js', 'minified/i18n/ui.datepicker-sk.min.js', 'modalbox', 'application.js', 'dashboard.js', 'notes.js' %>
+	<%= javascript_include_tag 'minified/ui.draggable.min.js', 'minified/ui.droppable.min.js', 'subjects.js' if params[:controller] == 'subjects' %>
+  	<!--[if IE]>
+	<%= stylesheet_link_tag '_ie.css' -%>
+	<![endif]-->
+</head>
+<body>
+
+<div id="container">
+	<a href="/" id="homepage"><span>Hlavná stránka</span></a>
+	<div id="header">
+		<% if logged_in? %>
+		<div id="nav">
+			<ul class="nav clearfix">
+				<li<%= ' class="active"' if params[:controller]=='overview' %>><a href="<%= url_for :controller => 'overview' %>">Nástenka</a></li>
+				<li<%= ' class="active"' if params[:controller]=='subjects' %>><a href="<%= url_for :controller => 'subjects' %>">Predmety</a></li>
+				<li<%= ' class="active"' if params[:controller]=='notes' %>><a href="<%= url_for notes_path %>">Známky</a></li>
+				<li<%= ' class="active"' if params[:controller]=='homeworks' %>><a href="<%= url_for homeworks_path %>">Domáce úlohy</a></li>
+				<li<%= ' class="active"' if params[:controller]=='exams' %>><a href="<%= url_for exams_path %>">Písomky</a></li>
+			</ul>
+		</div><!-- #menu -->
+		<% end %>
+	</div><!-- #header -->
+	<div id="user_nav">
+		<% if logged_in? -%>	
+			<strong><%= current_user.login %></strong>: <%= link_to "Nastavenia", edit_account_path, :class => "uni modalbox" %> |
+			<a href="<%= url_for odhlasenie_path %>" class="uni">Odhlásiť sa</a>
+		<% end -%>
+	</div>
+	<div id="content" class="clearfix">
+		<% if flash[:notice] %>
+		<div class="notice">
+			<div class="inner">
+				<h3><%= flash[:notice].split("|")[0] %></h3>
+				<span><%= flash[:notice].split("|")[1] %></span>
+			</div>
+		</div>
+		<% end %>
+		<% if flash[:error] %>
+		<div class="error">
+			<div class="inner">
+				<h3><%= flash[:error].split("|")[0] %></h3>
+				<span><%= flash[:error].split("|")[1] %></span>
+			</div>
+		</div>
+		<% end %>
+		<div id="primary">
+			<div id="primary_b">
+				<%= yield  %>
+			</div><!-- #primary_b -->
+			<div id="primary_f"></div>
+		</div><!-- #primary -->
+		<div id="secondary">
+			<%= yield :secondary %>
+		</div><!-- #secondary -->
+	</div><!-- #content -->
+</div><!-- #container -->
+<%= render :partial => 'layouts/google_analytics' %>
+</body>
+</html>

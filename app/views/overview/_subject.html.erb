@@ -1,0 +1,16 @@
+<li class="subject clearfix<%= " learning_done" if subject.subject_time_left == 0 %><%= " done" if subject.time_left == 0 %>" id="subject_<%= subject.id %>">
+	<div class="bar clearfix importance_<%= subject.importance %> <%= subject.color %>">
+		<h4><%= subject.title %></h4><span><strong class="subject_time"><%= subject.time_left %></strong>m</span>
+	</div>
+	<div class="info clearfix">
+		<div class="fl">
+			Priemer: <span class="average group_<%= subject.average_group %>"><%= (number_with_precision subject.average, :precision => 2) || "--" %></span>
+		</div><!-- .fl -->
+		<div class="fr">
+			<% if subject.time && subject.time > 0 -%>
+			<a href="<%= url_for :controller => 'overview', :action => 'setComplete', :id => subject.id %>" class="bound_dashboard_setComplete">Hotovo?</a>
+			<a class="uni bound_dashboard_revertComplete" href="<%= url_for :controller => 'overview', :action => 'revertComplete', :id => subject.id %>">Vrátiť</a>
+			<% end -%>
+		</div><!-- .fr -->
+	</div><!-- .bar -->
+</li>

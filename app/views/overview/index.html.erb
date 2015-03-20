@@ -1,0 +1,47 @@
+<h1>Učenie na <%= translate_wday(next_work_day).downcase %></h1>
+
+<div class="content">
+	<% if current_user.subjects.sum(:time) == 0 %>
+		<p class="tooltip" id="tooltip_empty">Zdá sa, že sa ti netreba nič učiť. <a href="<%= settings_path %>">Nastav si</a>, koľko sa ti treba učiť na predmety a uvidíš to na tejto stránke.</p>
+	<% end %>
+	
+	<ul class="dashboard clearfix">
+	<%= render :partial => 'subject', :collection => @subjects %>
+	</ul>
+</div><!-- .content -->
+
+<div class="clearfix">
+	<div class="fl" id="dashboard_left">
+		<h1 class="clearfix">
+			<div class="fl">
+				Domáce úlohy
+			</div><!-- .fl -->
+			<div class="fr normal_size">
+				<%= link_to "Pridať", new_homework_path({:redirect => "overview"}), :class => "normal_size modalbox" %>
+			</div><!-- .fr -->
+		</h1>
+		<div class="content">
+			<ul class="task_list small homeworks">
+				<%= render :partial => "homework", :collection => @homeworks %>
+			</ul>
+		</div><!-- .content -->
+	</div>
+
+	<div class="fl" id="dashboard_right">
+		<h1 class="clearfix">
+			<div class="fl">
+				Písomky
+			</div><!-- .fl -->
+			<div class="fr normal_size">
+				<%= link_to "Pridať", new_exam_path({:redirect => "overview"}), :class => "normal_size modalbox" %>
+			</div><!-- .fr -->
+		</h1>
+		<div class="content">
+			<ul class="task_list small exams">
+				<%= render :partial => "exam", :collection => @exams %>
+			</ul>
+		</div><!-- .content -->
+	</div>	
+</div>
+
+<%= render :partial => "side" %>

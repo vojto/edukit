@@ -1,0 +1,52 @@
+8
+
+dir
+74
+file:///Users/vojto/Sites/_svn/projects/edukit/branches/1.0.1-bugfix/app/views/user_mailer
+file:///Users/vojto/Sites/_svn/projects
+
+
+
+2009-03-10T21:15:39.488772Z
+49
+vojto
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+10918c3d-1bdf-404c-876f-a823f85b1bd1
+
+signup_notification.html.erb
+file
+
+
+
+
+2009-04-03T10:40:26.000000Z
+03ba5f74156b9fb075f754c7bc3ac28c
+2009-03-10T21:15:39.488772Z
+49
+vojto
+
+activation.html.erb
+file
+
+
+
+
+2009-04-03T10:40:26.000000Z
+b260268a33f83be1cf2ca0d7b45a59a7
+2009-03-10T21:15:39.488772Z
+49
+vojto
+

@@ -1,0 +1,9 @@
+element = $("<li><div class=\"subject blue subject_<%= @subject.id %>\"><%= @subject.abbr %></div></li>").css({opacity:0});
+$("div.subject", element).draggable({helper: 'clone'});
+$(".subject_new").fadeOut(function(){
+	$("ul.subjects li:last").before(element);
+	element.animate({opacity:1});
+});
+$(".subject_new input[type=text]").val('Nový predmet ...');
+$("#tooltip_empty").hide();
+$("#tooltip_subjects").show();

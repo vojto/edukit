@@ -1,0 +1,55 @@
+<% form_tag settings_path, :class => 'subject_settings'  do %>
+
+<h1 class="clearfix">
+	<div class="fl">Nastavenie predmetov</div>
+	<div class="fr normal_size">
+		<%= link_to "Rozvrh hodín", :controller => 'subjects', :action => 'index' %> | <%= link_to "Pridať predmet", new_subject_path %> |
+		<%= submit_tag 'Uložiť zmeny' %>
+	</div>
+</h1>
+
+<div class="content subject_settings">
+		<ul>
+		<% @subjects.each do |subject| %>
+		<li class="clearfix" id="subject_<%= subject.id %>">
+			<p><%= label_tag "subject[#{subject.id}][title]", "Názov predmetu:" %><br />
+				<%= text_field_tag "subject[#{subject.id}][title]", subject.title %>
+			</p>
+			<p>
+				<%= label "subject[#{subject.id}][time]", "Dĺžka učenia (<b>minúty</b>):" %><br />
+				<%= text_field_tag "subject[#{subject.id}][time]", subject.time %>
+			</p>
+			<div class="p">
+				<%= label "color", "Farba:" %><br />
+				<%= hidden_field_tag "subject[#{subject.id}][color]", subject.color %>
+				<div class="color_chooser clearfix">
+					<div class="selected_color clearfix">
+						<a class="single_color <%= subject.color %>" href="#color"></a>
+					</div><!-- .selected_color -->
+					<div class="color_palette clearfix">
+						<% SubjectsHelper::Colors.each do |color| %>
+						<a class="single_color <%= color %><%= " selected" if color.to_s == subject.color.to_s %>" href="#<%= color %>"></a>
+						<% end %>
+					</div><!-- .color_pallete -->
+				</div><!-- .color_chooser -->
+			</div>
+			<p class="last">
+				<%= link_to "Vymazať", {:controller => 'subjects', :action => 'destroy', :id => subject.id}, :class => 'bound_settings_delete' %>
+			</p>
+		</li>
+		<% end %>
+		
+		</ul>		
+</div><!-- .content -->
+
+<h1 class="tr normal_size"><%= link_to "Rozvrh hodín", :controller => 'subjects', :action => 'index' %> | <%= link_to "Pridať predmet", new_subject_path %> | <%= submit_tag 'Uložiť zmeny' %></h1>
+<% end %>
+
+<% content_for :secondary do %>
+<h3>Nastavenie predmetov</h3>
+<p>
+Tu sú všetky tvoje predmety. Okrem iného si môžeš nastaviť <em>dĺžku učenia</em>. Koľko minút si tu nastavíš, toľko sa ti potom zobrazí na nástenke. 
+</p>
+<p>Ak sa ti na nejaký predmet netreba vôbec učiť, nastav si dĺžku na nulu, a nebude sa na nástenke vôbec zobrazovať. 
+</p>
+<% end %>

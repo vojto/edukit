@@ -1,0 +1,71 @@
+<h1 class="clearfix">
+	<div class="fl">Rozvrh hodín</div>
+	<div class="fr normal_size">
+		<%= link_to "Nastavenie predmetov", :controller => 'subjects', :action => 'settings' %> |
+		<%= link_to "Pridať predmet", new_subject_path, :class => "bound_settings_addSubject" %>
+	</div>
+</h1>
+
+<div class="content timetable" id="timetable_subjects">
+	<p class="tooltip<%= " hidden" if @subjects.length == 0 %>" id="tooltip_subjects">Ťahaj predmety do rozvrhu hodín. Ak chceš nejaký odobrať, iba ho potiahni z rozvrhu von.</p>
+	<p class="tooltip<%= " hidden" if @subjects.length > 0 %>" id="tooltip_empty">Tvoj rozvrh hodín je prázdny. Aby sa naplnil, musíš si <%= link_to "pridať predmety.", new_subject_path, :class => "bound_settings_addSubject" %> </p>
+	<ul class="clearfix subjects">
+		<% for subject in @subjects -%>
+		<li><div class="subject <%= subject.color %> subject_<%= subject.id %>"><%= subject.abbr %></div></li>
+		<% end -%>
+		<li>
+			<% form_for(Subject.new) do |f| %>
+			<div class="subject_new">
+				<%= f.text_field :title, :size => 20, :value => 'Nový predmet ...', :class => 'erasable' %>
+				<%= f.submit "Pridať" %>
+			</div>
+			<% end %>
+		</li>
+	</ul>
+</div><!-- .content -->
+
+<div class="content">
+	<table class="timetable" cellspacing="10">
+		<thead>
+			<tr>
+				<td></td>
+				<td>0. </td>
+				<td>1. </td>
+				<td>2. </td>
+				<td>3. </td>
+				<td>4. </td>
+				<td>5. </td>
+				<td>6. </td>
+				<td>7. </td>
+				<td>8. </td>
+			</tr>
+		</thead>
+		<% 1.upto 5 do |day| %>
+		<tr>
+			<td class="legend"><%= format_day day %></td>
+			<% 0.upto 8 do |lesson| %>
+		<td class="subject_slot" id="slot_<%= "#{day}_#{lesson}" %>">
+				<% if @lessons["#{day}_#{lesson}"] -%>
+				<div class="subject <%= @lessons["#{day}_#{lesson}"].subject.color %> subject_<%= @lessons["#{day}_#{lesson}"].subject.id %>">
+					<%= @lessons["#{day}_#{lesson}"].subject.abbr if @lessons["#{day}_#{lesson}"] %>
+				</div>
+				<% else -%>
+				<div class="spacer"></div>
+				<% end -%>
+			</td>
+			<% end %>
+		</tr>
+		<% end %>
+	</table>	
+</div><!-- .content -->
+
+
+<% content_for :secondary do %>
+<h3>Rozvrh hodín</h3>
+<p>
+Vľavo vidíš svoj rozvrh hodín. Tu si nastav, aké predmety máš a kedy. Ak si chceš nejaký predmet pridať, klikni na pridať predmet a potom ho pretiahni do rozvrhu.
+</p>
+<p>
+Klikni si na <em>nastavenie predmetov</em>, aby si si nastavil farbu, dĺžku učenia, prípadne vymazal predmet.
+</p>
+<% end %>

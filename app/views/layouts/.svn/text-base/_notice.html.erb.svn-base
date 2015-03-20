@@ -1,0 +1,8 @@
+<% if flash[:notice] %>
+		<div class="notice">
+			<div class="inner">
+				<h3><%= flash[:notice].split("|")[0] %></h3>
+				<span><%= flash[:notice].split("|")[1] %></span>
+			</div>
+		</div>
+		<% end %>

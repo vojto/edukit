@@ -1,0 +1,55 @@
+8
+
+dir
+74
+file:///Users/vojto/Sites/_svn/projects/edukit/branches/1.0.1-bugfix/vendor/plugins/restful_authentication/generators/authenticated
+file:///Users/vojto/Sites/_svn/projects
+
+
+
+2009-03-10T21:15:39.488772Z
+49
+vojto
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+10918c3d-1bdf-404c-876f-a823f85b1bd1
+
+USAGE
+file
+
+
+
+
+2009-04-03T10:40:27.000000Z
+cdb2aed081ecd6e02941a4f298da3e72
+2009-03-10T21:15:39.488772Z
+49
+vojto
+
+authenticated_generator.rb
+file
+
+
+
+
+2009-04-03T10:40:27.000000Z
+af3ae21f341cae0ce609b4ff62cd3ad2
+2009-03-10T21:15:39.488772Z
+49
+vojto
+
+templates
+dir
+

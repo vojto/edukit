@@ -1,0 +1,3 @@
+$("form#new_homework").remove();
+$("div.content").prepend("<%= escape_javascript(render :partial => "form") %>");
+$("div.content form#new_homework").addClass("hilighted").addClass("ajaxified");

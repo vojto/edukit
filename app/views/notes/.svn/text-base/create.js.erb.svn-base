@@ -1,0 +1,1 @@
+$("#subject_<%= @subject.id %>").replaceWith("<%= escape_javascript(render(:partial => "subject", :locals => {:subject => @subject, :notes => @subject.notes})) %>");

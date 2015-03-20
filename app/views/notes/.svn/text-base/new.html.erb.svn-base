@@ -1,0 +1,10 @@
+<h1>Pridať známku</h1>
+
+<div class="content">
+	
+
+<%= render :partial => 'form' %>
+
+	
+</div><!-- .content -->
+

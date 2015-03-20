@@ -1,0 +1,20 @@
+require 'test_helper'
+
+class ExamTest < ActiveSupport::TestCase
+  # Replace this with your real tests.
+  test "should not create exam without date" do
+    exam = Exam.new
+    exam.save
+    
+    assert !exam.valid?
+  end
+  
+  
+  test "should set as done" do
+    exam = exams(:one)
+    exam.done!
+    exam.save
+    
+    assert exam.length == exam.length_done, "After setting a exam as done it should have equal length and length done!"
+  end
+end

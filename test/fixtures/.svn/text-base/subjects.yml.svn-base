@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+matematika:
+  user: quentin
+  title: Matematika
+  priority: 1
+
+slovencina:
+  user: quentin
+  title: Slovencina
+  priority: 1

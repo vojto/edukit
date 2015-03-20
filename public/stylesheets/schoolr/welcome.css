@@ -1,0 +1,121 @@
+/* @override 
+	http://localhost:3000/stylesheets/schoolr/welcome.css?1234100036
+	http://localhost:3000/stylesheets/schoolr/welcome.css?1234100647
+*/
+
+/* @group type */
+
+a { color: #1f3843; }
+
+a:hover { background: none; color: #1f3843; text-decoration: none; }
+
+h1 { background: none; text-align: left; padding: 0; margin-bottom: 10px; font: bold 20px Georgia, "Times New Roman"; }
+
+div.modal h1 { display: none; }
+
+
+
+/* @end */
+
+/* @group layout */
+
+/* @group new */
+
+span.new { font-size: 10px; background-color: #fdfc8c; text-transform: uppercase; color: #111; padding: 2px; }
+
+
+/* @end */
+
+/* @group tryout */
+
+#tryout { margin-top: 1px; }
+
+a.tryout { display: block; width: 162px; height: 52px; background-image: url(../../images/layout/button_tryout.png); }
+
+a.tryout:hover { display: block; width: 162px; height: 52px; background: url(../../images/layout/button_tryout.png) 0 -52px; }
+
+a.tryout span { display: none; }
+
+a.tryout_large { display: block; width: 190px; height: 81px; background-image: url(../../images/layout/button_tryout_large.png); }
+
+a.tryout_large:hover { background-position: 0 -81px; }
+
+a.tryout_large span { display: none; }
+
+span.tryout_text { color: #fff; font: 17px Tahoma; padding-top: 30px; padding-left: 20px; }
+
+
+/* @end */
+
+body { background-color: #fff; background-image: url(../../images/layout/lite_header_background.png); }
+
+#container { width: 1020px; }
+
+#header { background-image: url(../../images/layout/logo.png); height: 60px; }
+
+#top_links { text-align: right; padding-top: 10px; }
+
+#user_nav { position: absolute; top: 0px; right: -25px; }
+
+#banner { width: 1020px; height: 634px; background: url(../../images/layout/banner.jpg); margin-top: 1px; }
+
+#primary { background: none; margin: 0; width: 650px; }
+
+#secondary { margin: 0; width: 300px; padding-left: 10px; }
+
+#primary p { margin-bottom: 15px; color: #292929; }
+
+#primary .box { padding: 10px 20px; background-color: #fbfebb; margin-bottom: 15px; border-top: 1px solid #d4c81d; border-bottom: 1px solid #d4c81d; }
+
+#secondary .box { padding: 10px 20px; background-color: #f6f4e7; margin-bottom: 15px; border-top: 1px solid #d6d3d0; border-bottom: 1px solid #d6d3d0; }
+
+#secondary p { padding: 0; background: none; }
+
+#secondary ul { padding-left: 15px; }
+
+
+
+/* @end */
+
+/* @group messages */
+
+#messages { position: relative; }
+
+.message { position: absolute; width: 234px; height: 94px; font-size: 11px; background-image: url(../../images/message.png); padding: 40px 18px 18px; text-align: center; line-height: 50%; display: none; }
+
+.message p { line-height: 140%; margin-top: 10px; }
+
+#message_1 { top: 450px; left: 365px; }
+
+#message_2 { top: 460px; }
+
+#message_3 { top: 460px; left: 750px; }
+
+#message_zones { position: relative; }
+
+.message_zone { position: absolute; }
+
+#message_zone_1 { width: 545px; height: 425px; left: 235px; top: 150px; }
+
+#message_zone_2 { width: 215px; height: 425px; left: 20px; top: 150px; }
+
+#message_zone_3 { width: 210px; height: 425px; left: 780px; top: 150px; }
+
+
+
+/* @end */
+
+/* @group feature_list */
+
+ul.feature_list { list-style-image: url(../../images/tick.png); padding-left: 50px; font-weight: bold; color: #131313; margin-bottom: 15px; }
+
+ul.feature_list li { width: 400px; }
+
+ul.feature_list small { width: 500px; display: block; font-weight: normal; font-style: normal; color: #373737; }
+
+
+
+
+/* @end */
+
+img.nice { padding: 5px; background: #fff; border: 1px solid #bbb; }

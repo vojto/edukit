@@ -1,0 +1,13 @@
+$("li.subject").removeClass("done").removeClass("learning_done").show();
+<% for subject in @subjects do -%>
+	$("li#subject_<%= subject.id %> strong.subject_time").text(<%= subject.time_left.to_i %>);
+	$("li#subject_<%= subject.id %> .bar").removeClass("importance_0").removeClass("importance_1").removeClass("importance_2").removeClass("importance_3").removeClass("importance_4").removeClass("importance_5").removeClass("importance_6").removeClass("importance_7").removeClass("importance_8").removeClass("importance_9").removeClass("importance_10").addClass("importance_<%= subject.importance.to_i %>");
+
+	<% if subject.time_left == 0 -%>
+	$("li#subject_<%= subject.id %>").addClass("done");
+	<% end -%>
+
+	<% if subject.subject_time_left == 0 %>
+	$("li#subject_<%= subject.id %>").addClass("learning_done");
+	<% end %>
+<% end -%>

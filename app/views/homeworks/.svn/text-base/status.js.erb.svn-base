@@ -1,0 +1,6 @@
+<% if @homework.done? %>
+$("#homework_<%= @homework.id %>").addClass("done");
+<% else %>
+$("#homework_<%= @homework.id %>").removeClass("done");
+<% end %>
+<%= render :partial => "overview/update_subjects" %>

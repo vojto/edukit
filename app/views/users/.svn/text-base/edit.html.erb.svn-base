@@ -1,0 +1,18 @@
+<h1>Moje konto</h1>
+
+<div class="content">
+	<h3>Nastavenie konta</h3>
+	
+	<% form_for @user, :url => account_path,:builder => LabeledFormBuilder, :html => {:class => "normal"} do |f| -%>
+
+	<%= f.text_field :email, :label => "E-mail" %>
+
+	<%= f.password_field :password, :label => "Heslo" %>
+
+	<%= f.password_field :password_confirmation, :label => "Potvdiť heslo" %>
+
+	<%= submit_tag 'Uložiť zmeny' %>
+
+	<% end -%>
+</div><!-- .contents -->
+

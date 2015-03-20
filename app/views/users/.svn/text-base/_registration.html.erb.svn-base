@@ -1,0 +1,17 @@
+<div class="content">
+	<h3>Registrácia</h3>
+	<% form_for @user, :builder => LabeledFormBuilder, :url => users_path, :html => {:class => "normal"} do |f| -%>
+	
+	<%= f.text_field :login, :label => "Prihlasovacie meno" %>
+
+	<%= f.text_field :email, :label => "E-mail" %>
+
+	<%= f.password_field :password, :label => "Heslo" %>
+
+	<%= f.password_field :password_confirmation, :label => "Potvdiť heslo" %>
+
+	<%= submit_tag 'Vytvoriť konto' %>
+	
+	<% end -%>
+	
+</div>

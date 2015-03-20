@@ -1,0 +1,30 @@
+<h1 class="clearfix">
+	<div class="fl">Moje známky</div>
+	<div class="fr normal_size">
+		<%= link_to "Vymazať všetky", reset_notes_path, :method => :delete, :confirm => "Buď opatrný, tímto zmažeš všetky svoje známky! Chceš pokračovať?" %>
+	</div>
+</h1>
+
+<div class="content">
+	
+	<p class="tooltip">Tip: Ak chceš rýchlejšie vymazať známku, klikni na ňu so stlačeným Alt (Option)</p>
+	
+	<ul class="task_list notes">
+	<% @subjects.each do |subject, notes| %>
+	<%= render :partial => 'subject', :locals => { :subject => subject, :notes => notes } %>
+	<% end %>
+	</ul>
+</div><!-- .content -->
+
+<% content_for :secondary do %>
+<h3>Známky</h3>
+<p>
+	Sekcia známky je veľmi užitočná. Vľavo vidíš zoznam svojích <em>predmetov</em>, svoje <em>známky</em> a <em>priemery</em>. 
+</p>
+<p>
+	Ku každému predmetu si môžeš pridať známky jednoducho kliknutím na <em>pridať známku</em>. Iba vyber známku, vyplň popis a klikni na pridať.
+</p>
+<p>
+	Známka sa pridá a priemer sa prepočíta. Na nástenke potom uvidíš ku každému predmetu aj <em>aktuálny priemer</em>.
+</p>
+<% end %>

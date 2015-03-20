@@ -1,0 +1,16 @@
+<li class="clearfix day_<%= exam.when.to_s %><%= " done" if exam.done? %>" id="exam_<%= exam.id %>">
+	<div class="subject fl <%= exam.subject.color %>">
+		<%= exam.subject %>
+	</div><!-- .subject -->
+	<div class="length fl"><%= exam.length %> minút</div>
+	<div class="notes fl">
+		<%= exam.notes %>
+	</div><!-- .notes -->
+
+	<div class="status fr">
+		<%= link_to "Upraviť", edit_exam_path(exam), :class => "uni" %> |
+		<%= link_to "Vymazať", destroy_exam_path(exam), :class => "uni ajaxified" %> |
+		<%= link_to "Hotovo?", status_exam_path(exam, :status => "done"), :class => "ajaxified done" %>
+		<%= link_to "Vrátiť", status_exam_path(exam, :status => "not"), :class => "ajaxified revert" %>
+	</div><!-- .status -->
+</li>

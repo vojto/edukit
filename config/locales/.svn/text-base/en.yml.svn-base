@@ -1,0 +1,39 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+  
+en:
+  date:
+    formats:
+      default: "%d.%m.%Y"
+      
+  activerecord:
+      attributes:
+          user:
+              login: "Prihlasovacie meno"
+              password: "Heslo"
+              password_confirmation: "Potvrdenie hesla"
+              email: "E-mail"
+          session:
+              login: "Prihlasovacie meno"
+              password: "Heslo"
+              password_confirmation: "Potvrdenie hesla"
+              email: "E-mail"
+          homework:
+              when: "Dátum"
+              subject_id: "Predmet"
+              length: "Dĺžka učenia"
+              notes: "Poznámky"
+          exam:
+              when: "Dátum"
+              subject_id: "Predmet"
+              length: "Dĺžka učenia"
+              notes: "Poznámky"
+          note:
+            subject_id: "Predmet"
+            description: "Popis"
+            note: "Známka"
+  actions:
+    session:
+      new: "Prihlásenie"
+    users:
+      new: "Registrácia"
