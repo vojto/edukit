@@ -1,0 +1,1 @@
+![edukit](https://raw.githubusercontent.com/vojto/edukit/master/public/images/layout/banner.jpg)
